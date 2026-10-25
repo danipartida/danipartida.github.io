@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Daniela Partida · Marketing &amp; Brand Strategy</title>
+<meta name="description" content="Daniela Partida: marketing strategy, brand strategy, communications &amp; PR, copywriting and creative direction. Based in Spain.">
+<meta property="og:title" content="Daniela Partida · Marketing &amp; Brand Strategy">
+<meta property="og:description" content="Marketing strategy, brand, PR, content and creative direction. Based in Spain.">
+<meta property="og:image" content="dani.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Tinos:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400&text=%E0%A5%90&display=swap">
+<style>
+/* Layout: editorial portfolio. Rowan-style photo hero with the name centered, poster-style yellow
+   manifesto, Open-style work rows (photo left, tinted panel right), case pages by hash.
+   Type follows Dani's Canva portfolio: heavy all-caps headings, light narrow body, bold small labels. */
+:root{
+  --ink:#0d0f0e;
+  --ink2:#151816;
+  --yellow:#f7e48f;
+  --paper:#efeadb;
+  --mute:#8f938a;
+  --brown:#3b2417;
+  --moss:#2e3825;
+  --oxblood:#5b1a13;
+  --water:#15231e;
+  --line:rgba(239,234,219,.16);
+  --line-ink:rgba(13,15,14,.28);
+  --display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-weight:400;font-variation-settings:"wdth" 100;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.inner{max-width:1280px;margin-inline:auto}
+.mono{font-family:var(--display);font-weight:700;font-variation-settings:"wdth" 100;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;line-height:1.5}
+.br::before{content:"[\00a0"}.br::after{content:"\00a0]"}
+h1,h2,h3,h4{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 100;line-height:.88;letter-spacing:-.045em;margin:0;text-wrap:balance}
+h2{text-transform:uppercase}
+p{margin:0}
+.grain{position:relative;isolation:isolate}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:4;opacity:.28;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+
+/* header */
+.top{position:absolute;inset:0 0 auto;z-index:20;padding-top:calc(18px + env(safe-area-inset-top,0px))}
+.top .inner{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-family:var(--display);font-weight:600;font-variation-settings:"wdth" 100;font-size:18px;text-decoration:none}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-size:13px;font-weight:400;opacity:.85}
+nav a:hover{opacity:1;color:var(--yellow)}
+.lang{display:inline-flex;border:1px solid rgba(239,234,219,.4);border-radius:999px;overflow:hidden}
+.lang button{all:unset;cursor:pointer;font-family:var(--display);font-weight:700;font-size:10px;letter-spacing:.06em;padding:5px 9px;color:var(--paper)}
+.lang button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
+.lang button:focus-visible{outline:2px solid var(--yellow)}
+@media (max-width:700px){nav a{display:none}}
+
+/* hero (Rowan) */
+.hero{position:relative;min-height:min(860px,max(580px,92vh));display:grid;grid-template-rows:1fr auto;overflow:hidden;background:var(--water)}
+.hero .bg{object-position:50% 50%;filter:brightness(.5)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(13,15,14,.45),rgba(13,15,14,.05) 35%,rgba(13,15,14,.1) 65%,rgba(13,15,14,.7))}
+.hero-mid{position:relative;z-index:5;align-self:center;justify-self:center;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;padding-top:80px;text-align:left}
+.hero-mid h1{font-weight:500;font-size:clamp(36px,5.5vw,72px);letter-spacing:-.04em;line-height:1}
+.hero-mid .mono{max-width:24ch;font-weight:500}
+.hero-foot{position:relative;z-index:5;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;padding-block:22px calc(22px + env(safe-area-inset-bottom,0px))}
+
+/* manifesto (poster) */
+.yellow{background:var(--yellow);color:var(--ink)}
+.manifesto .inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:center;padding-block:clamp(72px,9vw,120px)}
+.manifesto h2{font-size:clamp(48px,7.2vw,112px);line-height:.95}
+.manifesto h2 em{font-style:normal;display:block}
+.photo{position:relative;width:100%;max-width:560px;justify-self:end;margin-right:30px}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 38%}
+.photo-cap{position:absolute;right:-26px;top:0;writing-mode:vertical-rl;transform:rotate(180deg)}
+.intro{font-size:clamp(17px,1.5vw,20px);line-height:1.45;max-width:46ch;font-weight:400;margin-left:clamp(0px,4vw,64px)}
+.man-meta{display:flex;flex-wrap:wrap;gap:6px 18px;border-top:1px solid var(--line-ink);padding-top:14px;width:100%}
+@media (max-width:860px){.manifesto .inner{grid-template-columns:minmax(0,1fr)}.intro{margin-left:0}.photo-cap{display:none}}
+
+/* numbers */
+.nums .inner{display:grid;grid-template-columns:repeat(5,1fr);padding-block:48px;border-bottom:1px solid var(--line)}
+.stat{display:grid;gap:10px;padding:4px 18px;border-left:1px solid var(--line);align-content:start}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 100;font-size:clamp(34px,4.2vw,60px);line-height:1;letter-spacing:-.05em;color:var(--yellow);font-variant-numeric:tabular-nums}
+.stat span{color:var(--mute)}
+@media (max-width:900px){.nums .inner{grid-template-columns:repeat(2,1fr);row-gap:30px}.stat:nth-child(odd){border-left:0;padding-left:0}}
+
+/* brands list */
+.clients .inner{display:grid;grid-template-columns:200px 1fr;gap:16px 28px;padding-block:36px 44px;border-bottom:1px solid var(--line)}
+.clients .mono{color:var(--mute);padding-top:6px}
+.clients p{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 100;text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(20px,2.4vw,34px);line-height:1.15}
+.clients i{font-style:normal;color:var(--yellow);font-weight:300;padding-inline:.15em}
+@media (max-width:760px){.clients .inner{grid-template-columns:1fr}}
+
+/* section heads */
+.band{padding-block:clamp(60px,7.5vw,104px)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px 40px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,64px)}
+.head h2{font-size:clamp(46px,8.4vw,124px)}
+.head p{max-width:40ch;color:var(--mute)}
+.yellow .head p{color:rgba(13,15,14,.72)}
+
+/* disciplines */
+.disc{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.d{padding:26px 24px 30px 0;border-bottom:1px solid var(--line-ink);display:grid;gap:12px;align-content:start;min-width:0}
+.d:not(:nth-child(3n+1)){padding-left:24px;border-left:1px solid var(--line-ink)}
+.d h3{font-size:clamp(24px,2.4vw,32px);line-height:.95;letter-spacing:-.04em}
+.d p{max-width:38ch;font-weight:400}
+.d .mono{color:rgba(13,15,14,.66)}
+@media (max-width:900px){.disc{grid-template-columns:1fr 1fr}.d:not(:nth-child(3n+1)){padding-left:0;border-left:0}.d:nth-child(even){padding-left:20px;border-left:1px solid var(--line-ink)}}
+@media (max-width:560px){.disc{grid-template-columns:1fr}.d:nth-child(even){padding-left:0;border-left:0}}
+
+/* work rows (Open) */
+.rows{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;min-height:clamp(300px,34vw,440px);text-decoration:none;overflow:hidden;border-radius:4px}
+.row .ph{position:relative;overflow:hidden;background:var(--ink2)}
+.row .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.row:hover .ph img{transform:scale(1.04)}
+.panel{position:relative;padding:clamp(22px,3vw,36px);display:grid;grid-template-rows:auto 1fr auto;gap:18px;min-width:0}
+.panel::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 85% 15%,rgba(255,255,255,.07),transparent 60%);pointer-events:none}
+.panel h3{font-size:clamp(30px,3.6vw,52px);font-weight:600;letter-spacing:-.04em;line-height:.95}
+.panel .who{margin-top:8px;font-size:17px;opacity:.85}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start;align-self:start}
+.chip{border:1px solid rgba(239,234,219,.35);border-radius:999px;padding:4px 10px;font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase}
+.panel-foot{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.res{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 100;font-size:clamp(20px,2vw,26px);line-height:1.15;color:var(--yellow);max-width:22ch;letter-spacing:-.02em}
+.pill{border:1px solid var(--paper);border-radius:999px;padding:10px 16px;font-size:13px;font-weight:400;white-space:nowrap}
+.row:hover .pill{background:var(--paper);color:var(--ink)}
+.t-brown{background:var(--brown)}.t-moss{background:var(--moss)}.t-ox{background:var(--oxblood)}.t-water{background:var(--water)}.t-ink{background:#1d1a17}
+.t-stadium{background:#4a1416}.t-ocean{background:#10283a}.t-sky{background:#122f4e}.t-skin{background:#2b201d}.t-caramel{background:#4a2b18}.t-pillow{background:#2c3a24}.t-sand{background:#4b3a2c}
+@media (max-width:760px){.row{grid-template-columns:1fr}.row .ph{aspect-ratio:4/3}}
+
+/* reels */
+.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.reel{margin:0;display:grid;gap:10px;align-content:start;min-width:0}
+.reel .frame{all:unset;position:relative;display:block;aspect-ratio:9/16;overflow:hidden;background:#000;border-radius:4px;cursor:pointer}
+.reel .frame:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel .snd{position:absolute;left:10px;bottom:10px;z-index:2;background:rgba(13,15,14,.72);color:var(--paper);padding:5px 9px;border-radius:999px;pointer-events:none;transition:background .2s,color .2s}
+.reel .frame:hover .snd{background:var(--yellow);color:var(--ink)}
+.reel.on .snd{background:var(--yellow);color:var(--ink)}
+.reel figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:6px 12px;flex-wrap:wrap;color:var(--mute)}
+.reel .ig{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(239,234,219,.35);white-space:nowrap}
+.reel .ig:hover{color:var(--yellow);border-color:var(--yellow)}
+@media (max-width:900px){.reels{grid-template-columns:1fr 1fr}}
+
+/* experience */
+.xp{display:grid;border-top:1px solid var(--line)}
+.x{display:grid;grid-template-columns:200px 1.1fr 1.4fr;gap:24px;padding-block:28px;border-bottom:1px solid var(--line)}
+.x h3{font-size:clamp(24px,2.6vw,34px);font-weight:800;letter-spacing:-.04em;line-height:1}
+.x .role{margin-top:10px;color:var(--yellow)}
+.x ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.x li::marker{color:var(--yellow)}
+.x .when{color:var(--mute)}
+.x.todo{opacity:.6}
+@media (max-width:860px){.x{grid-template-columns:1fr;gap:12px}}
+
+/* approach */
+.approach{position:relative;overflow:hidden;background:var(--water)}
+.approach .bg{filter:brightness(.6) saturate(.9)}
+.approach .inner{position:relative;z-index:5;padding-block:clamp(90px,12vw,160px);display:grid;gap:36px}
+.approach h2{font-size:clamp(34px,5.6vw,84px);color:#f6e7b0;max-width:16ch}
+.approach h2 + h2{justify-self:end;text-align:right;color:var(--yellow)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.sk{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:14px;align-content:start;min-width:0}
+.sk h3{font-size:22px;font-weight:800;letter-spacing:-.03em;text-transform:uppercase}
+.sk ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;color:var(--mute)}
+@media (max-width:900px){.skills{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.skills{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:center}
+.portrait{position:relative;max-width:460px;width:100%}
+.portrait img{aspect-ratio:4/5;width:100%;object-fit:cover;object-position:50% 25%;filter:grayscale(1) contrast(1.08)}
+.about-txt{display:grid;gap:22px;min-width:0}
+.about-txt h2{font-size:clamp(44px,7vw,100px);color:var(--yellow)}
+.about-txt p{max-width:50ch;font-size:18px;line-height:1.6;color:rgba(239,234,219,.86)}
+.off{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.off .chip{font-size:11px;padding:6px 12px}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* design strip */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(200px,22vw,300px);gap:12px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+.strip figure{margin:0;scroll-snap-align:start;display:grid;gap:8px}
+.strip img{aspect-ratio:4/5;width:100%;object-fit:cover}
+.strip figcaption{color:var(--mute)}
+
+/* open to: big typographic rows */
+.open .inner{padding-block:clamp(64px,8vw,110px)}
+.open-top{display:flex;justify-content:space-between;gap:16px;padding-bottom:18px;border-bottom:2px solid var(--ink)}
+.open-row{display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px 28px;align-items:center;padding-block:clamp(18px,2.4vw,30px);border-bottom:1px solid var(--line-ink);text-decoration:none;color:var(--ink);transition:padding .4s cubic-bezier(.2,.7,.2,1)}
+.open-n{font-family:var(--display);font-weight:700;font-size:14px}
+.open-t{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 100;text-transform:uppercase;font-size:clamp(30px,7vw,104px);letter-spacing:-.05em;line-height:.88}
+.open-d{grid-column:2;font-weight:400;font-size:17px;max-width:52ch}
+.open-row:hover{padding-left:18px}
+.open-row:hover .open-t{-webkit-text-stroke:2px var(--ink);color:transparent}
+.open-t,.open-d{min-width:0}
+@media (max-width:760px){.open-row{grid-template-columns:32px minmax(0,1fr)}.open-d{grid-column:2}.open-t{font-size:clamp(28px,9vw,60px);overflow-wrap:anywhere}}
+/* (old cards) */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{background:var(--ink2);border:1px solid var(--line);padding:26px;display:grid;gap:12px;align-content:start;min-width:0}
+.svc h3{font-size:28px;font-weight:800;letter-spacing:-.04em}
+.svc p{color:var(--mute)}
+.svc .mono{color:var(--yellow)}
+@media (max-width:860px){.svcs{grid-template-columns:1fr}}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.quote{margin:0;border:1px dashed rgba(243,217,107,.4);padding:26px;display:grid;gap:18px;align-content:space-between}
+.quote p{font-size:19px;line-height:1.35;color:var(--mute)}
+@media (max-width:860px){.quotes{grid-template-columns:1fr}}
+
+/* contact */
+.contact{position:relative;overflow:hidden;background:var(--water)}
+.contact .bg{filter:brightness(.7) saturate(.9)}
+.contact .inner{position:relative;z-index:5;display:grid;grid-template-columns:minmax(0,1fr);gap:40px;padding-block:clamp(90px,13vw,170px)}
+.contact h2{font-size:clamp(52px,11.5vw,180px);color:var(--yellow);line-height:.86}
+.c-row{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between;border-top:1px solid rgba(239,234,219,.35);padding-top:24px}
+.email{font-family:var(--display);font-weight:700;font-variation-settings:"wdth" 100;font-size:clamp(20px,2.6vw,32px);user-select:all;overflow-wrap:anywhere}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{all:unset;cursor:pointer;font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px;border:1px solid var(--paper);text-decoration:none;color:var(--paper)}
+.btn:hover{background:var(--paper);color:var(--ink)}
+.btn.primary{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+.btn:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.btn[aria-disabled="true"]{opacity:.5;cursor:default}
+footer{border-top:1px solid var(--line);padding-block:22px calc(22px + env(safe-area-inset-bottom,0px));color:var(--mute)}
+footer .inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* case page */
+.case-top{position:relative;min-height:min(640px,max(460px,72vh));display:grid;align-content:end;overflow:hidden;background:var(--water)}
+.case-top .bg{filter:brightness(.62)}
+.case-top::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(13,15,14,.5),rgba(13,15,14,0) 30%,rgba(13,15,14,.85))}
+.case-top .inner{position:relative;z-index:5;width:100%;padding-block:110px 40px;display:grid;gap:22px}
+.case-top h1{font-size:clamp(46px,9vw,140px);color:var(--yellow);text-transform:uppercase}
+.back{text-decoration:none}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1px solid var(--line);padding-top:18px}
+.meta div{display:grid;gap:4px;min-width:0}
+.meta .mono{color:var(--yellow)}
+@media (max-width:760px){.meta{grid-template-columns:1fr 1fr}}
+.cbody{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(28px,6vw,90px)}
+.cbody h2{font-size:clamp(28px,3.2vw,42px);margin-bottom:16px}
+.cbody p{font-size:18px;max-width:52ch}
+.cbody p + p{margin-top:14px}
+.did{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--line)}
+.did li{display:grid;grid-template-columns:64px 1fr;gap:14px;padding-block:14px;border-bottom:1px solid var(--line)}
+.did li span:first-child{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 100;color:var(--yellow);font-size:22px;letter-spacing:-.04em}
+@media (max-width:860px){.cbody{grid-template-columns:1fr}}
+.cres{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0 18px}
+.cres div{padding:22px 0;border-top:2px solid var(--ink);display:grid;gap:8px;align-content:start}
+.cres b{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 100;font-size:clamp(38px,4.6vw,64px);line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.imp{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 18px}
+.imp li{border-top:1px solid var(--line-ink);padding-top:14px;font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 100;font-size:clamp(18px,1.6vw,22px);letter-spacing:-.025em;line-height:1.2}
+.imp-h{margin-top:40px;display:block}
+.gal{columns:3 260px;column-gap:12px}
+.gal img,.gal video{display:block;width:100%;margin-bottom:12px;break-inside:avoid}
+.next{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;text-decoration:none;border-top:1px solid var(--line);padding-top:24px}
+.next h3{font-size:clamp(34px,6vw,84px);text-transform:uppercase;transition:color .3s}
+.next:hover h3{color:var(--yellow)}
+
+/* Spiritual brands view: a calmer world inside the same site. Cream, earth and sage with muted
+   chakra accents; a classic Times-style serif in italic carries the voice; thin lines, circles, air. */
+:root{
+  --cream:#f2ece2;--cream2:#e8e0d2;--earth:#2a2018;--earth2:#3a2d22;--sage:#6b7656;--sage-l:#a7af90;
+  --lilac:#cfc2df;--coral:#d9876b;--sand:#c8ac84;
+  --c1:#b9604a;--c2:#d9876b;--c3:#d6b25e;--c4:#8f9a78;--c5:#7f9fae;--c6:#8a80b4;--c7:#b7a6cf;
+  --zen:"Times New Roman",Tinos,Times,serif;
+}
+#spiritual-view{background:var(--cream);color:var(--earth)}
+body.sp-on #contact{display:none}
+.z-serif{font-family:var(--zen);font-weight:400;letter-spacing:-.01em;text-transform:none}
+.z-it{font-family:var(--zen);font-style:italic;font-weight:400;letter-spacing:-.01em;text-transform:none}
+.z-label{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.z-brace::before{content:"{\00a0"}.z-brace::after{content:"\00a0}"}
+.sun{width:34px;height:34px;color:var(--c3);display:block}
+.sun line{stroke:currentColor;stroke-width:1.1;stroke-linecap:round}
+.z-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid currentColor;border-radius:999px;padding:12px 20px;font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;background:transparent;color:inherit;transition:background .3s,color .3s}
+.z-btn:hover{background:var(--cream);color:var(--earth);border-color:var(--cream)}
+.z-btn.solid{background:var(--cream);color:var(--earth);border-color:var(--cream)}
+.z-btn.solid:hover{background:transparent;color:var(--cream)}
+.z-btn.dark{color:var(--earth)}
+.z-btn.dark:hover{background:var(--earth);color:var(--cream);border-color:var(--earth)}
+.z-btn[hidden]{display:none!important}
+.chakra{display:flex;gap:9px;justify-content:center}
+.chakra i{width:9px;height:9px;border-radius:50%;display:block}
+.chakra i:nth-child(1){background:var(--c1)}.chakra i:nth-child(2){background:var(--c2)}.chakra i:nth-child(3){background:var(--c3)}.chakra i:nth-child(4){background:var(--c4)}.chakra i:nth-child(5){background:var(--c5)}.chakra i:nth-child(6){background:var(--c6)}.chakra i:nth-child(7){background:var(--c7)}
+
+/* hero */
+.z-hero{position:relative;min-height:min(940px,max(620px,100vh));display:grid;place-items:center;overflow:hidden;background:var(--earth);color:var(--cream);text-align:center}
+.z-hero .bg{object-position:50% 62%;filter:brightness(.7) saturate(.8) sepia(.12)}
+.z-hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(42,32,24,.55),rgba(42,32,24,.08) 38%,rgba(42,32,24,.15) 62%,rgba(42,32,24,.8))}
+.z-hero .inner{position:relative;z-index:5;display:grid;justify-items:center;gap:22px;padding-block:130px 120px;width:100%}
+.z-hero .sun{width:46px;height:46px;color:#ecd9a6}
+.z-hero h1{font-family:var(--zen);font-weight:400;font-size:clamp(46px,8.4vw,128px);line-height:.95;letter-spacing:-.025em;text-transform:none;text-wrap:balance}
+.z-hero h1 em{display:block;font-style:italic}
+.z-hero p{font-size:clamp(16px,1.5vw,19px);max-width:44ch;line-height:1.5;opacity:.9}
+.z-hero .z-ctas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:6px}
+.z-hero .z-hero-foot{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;padding:0;margin:0 auto;width:auto;max-width:1280px;left:0;right:0;padding-inline:16px;justify-items:normal;}
+@media (max-width:600px){.z-hero .z-hero-foot{grid-template-columns:1fr;gap:12px;justify-items:center}.z-hero-foot > :first-child,.z-hero-foot > :last-child{justify-self:center}.z-hero-foot .chakra{order:-1}}
+.z-hero-foot > :first-child{justify-self:end}.z-hero-foot > :last-child{justify-self:start}
+.z-hero-foot{position:absolute;z-index:5;left:0;right:0;bottom:calc(24px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.z-hero-foot a{text-decoration:none;opacity:.85}
+.z-hero-foot a:hover{opacity:1}
+
+/* about */
+.z-about .inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:24px clamp(28px,5vw,80px);padding-block:clamp(80px,10vw,140px) clamp(48px,6vw,80px)}
+.z-about .z-label{color:#8a7a68;padding-top:14px}
+.z-about h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(32px,4.2vw,60px);line-height:1.08;letter-spacing:-.02em;max-width:22ch}
+.z-about h2 em{font-style:italic}
+.z-about .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px 36px;margin-top:34px;max-width:780px}
+.z-about .cols p{font-size:15.5px;line-height:1.65;color:#5a4a3c}
+@media (max-width:760px){.z-about .inner{grid-template-columns:minmax(0,1fr)}.z-about .cols{grid-template-columns:1fr}}
+.z-about .z-strip{display:grid;padding-top:0;gap:12px;grid-template-columns:1fr 1.6fr 1fr 1fr;gap:12px;padding-bottom:clamp(52px,6vw,84px)}
+.z-strip img{width:100%;height:clamp(220px,26vw,360px);object-fit:cover;border-radius:3px}
+@media (max-width:760px){.z-about .z-strip{grid-template-columns:1fr 1fr}.z-strip img{height:220px}}
+
+/* who */
+.z-who{background:var(--earth);color:var(--cream);text-align:center}
+.z-who .inner{padding-block:clamp(52px,6vw,84px);display:grid;justify-items:center;gap:30px}
+.z-who .lead{font-family:var(--zen);font-style:italic;font-size:clamp(22px,2.4vw,32px);color:#e3d3b4;max-width:30ch;line-height:1.3}
+.z-who .suns{display:flex;gap:clamp(28px,6vw,90px);justify-content:center;flex-wrap:wrap}
+.z-who .suns div{display:grid;justify-items:center;gap:12px}
+.z-who .suns .sun{width:42px;height:42px}
+.z-who .list{font-family:var(--zen);font-size:clamp(18px,2vw,26px);line-height:1.6;max-width:44ch;font-variant:small-caps;letter-spacing:.03em}
+.z-who .list span{white-space:nowrap}
+.z-who .list b{font-weight:400;color:var(--c3);padding-inline:.35em}
+
+/* services */
+.z-svc .inner{padding-block:clamp(52px,6vw,84px)}
+.z-head{display:grid;justify-items:center;text-align:center;gap:14px;margin-bottom:clamp(32px,4vw,56px)}
+.z-head h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.025em}
+.z-head h2 em{font-style:italic}
+.z-head p{max-width:46ch;color:#6a5a4a;font-size:16px}
+.z-head .z-label{color:#8a7a68}
+.z-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(42,32,24,.18)}
+.z-card{padding:34px 28px 38px;border-bottom:1px solid rgba(42,32,24,.18);display:grid;gap:14px;align-content:start;min-width:0}
+.z-card:not(:nth-child(3n+1)){border-left:1px solid rgba(42,32,24,.18)}
+.z-dot{width:46px;height:46px;border-radius:50%;border:1px solid var(--k);background:color-mix(in srgb,var(--k) 22%,transparent);display:grid;place-items:center;font-family:var(--zen);font-style:italic;font-size:18px;color:var(--earth)}
+.z-card h3{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(26px,2.4vw,34px);line-height:1.05;letter-spacing:-.02em}
+.z-card p{font-size:15.5px;line-height:1.6;color:#5a4a3c}
+.z-card ul{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:6px}
+.z-card li{font-size:14px;color:#6a5a4a;padding-left:16px;position:relative}
+.z-card li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--k)}
+@media (max-width:900px){.z-grid{grid-template-columns:1fr 1fr}.z-card:not(:nth-child(3n+1)){border-left:0}.z-card:nth-child(even){border-left:1px solid rgba(42,32,24,.18)}}
+@media (max-width:600px){.z-grid{grid-template-columns:1fr}.z-card:nth-child(even){border-left:0}.z-card{padding-inline:0}}
+
+/* process: overlapping circles */
+.z-proc{background:var(--sage);color:var(--cream);text-align:center}
+.z-proc .inner{padding-block:clamp(52px,6vw,84px);display:grid;justify-items:center;gap:40px}
+.z-proc h2{font-family:var(--zen);font-weight:400;font-style:italic;text-transform:none;font-size:clamp(40px,5.6vw,80px);line-height:1}
+.rings{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:min(1000px,100%)}
+.ring{display:grid;justify-items:center;gap:18px;min-width:0}
+.ring .c{width:min(230px,26vw);aspect-ratio:1;border:1px solid rgba(242,236,226,.6);border-radius:50%;display:grid;place-items:center;margin-inline:-14%}
+.ring .c span{font-family:var(--display);font-weight:600;font-size:clamp(11px,1.1vw,14px);letter-spacing:.16em;text-transform:uppercase}
+.ring p{font-size:14.5px;line-height:1.55;max-width:22ch;opacity:.88}
+@media (max-width:760px){.rings{grid-template-columns:1fr 1fr;row-gap:30px}.ring .c{width:min(170px,40vw);margin-inline:0}}
+
+/* proof */
+.z-proof{background:var(--earth2);color:var(--cream)}
+.z-proof .inner{padding-block:clamp(52px,6vw,84px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,6vw,90px);align-items:center}
+.z-proof .vids{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.z-proof video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:3px;background:#000;display:block}
+.z-proof .z-label{color:var(--sand)}
+.z-proof h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(38px,5vw,72px);line-height:1;letter-spacing:-.02em;margin-top:14px}
+.z-proof h2 em{font-style:italic;color:#e3d3b4}
+.z-nums{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin-top:30px}
+.z-nums div{border-top:1px solid rgba(242,236,226,.2);padding:16px 0;display:grid;gap:4px}
+.z-nums b{font-family:var(--zen);font-weight:400;font-size:clamp(36px,4vw,54px);line-height:1;letter-spacing:-.02em}
+.z-nums span{font-size:13px;opacity:.7}
+.z-proof .q{font-family:var(--zen);font-style:italic;font-size:clamp(19px,1.7vw,23px);line-height:1.4;margin-top:22px;color:#e3d3b4;max-width:40ch}
+.z-proof .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+@media (max-width:860px){.z-proof .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* protect */
+.z-prot{background:var(--cream2)}
+.z-prot .inner{padding-block:clamp(52px,6vw,84px)}
+.z-three{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,60px);text-align:center}
+.z-three div{display:grid;justify-items:center;gap:14px;align-content:start}
+.z-three h3{font-family:var(--zen);font-weight:400;font-style:italic;text-transform:none;font-size:30px;letter-spacing:-.01em}
+.z-three p{font-size:15.5px;line-height:1.6;color:#5a4a3c;max-width:30ch}
+@media (max-width:760px){.z-three{grid-template-columns:1fr}}
+
+/* faq */
+.z-faq .inner{padding-block:clamp(52px,6vw,84px);max-width:880px}
+.z-faq details{border-bottom:1px solid rgba(42,32,24,.2);padding-block:20px}
+.z-faq details:first-of-type{border-top:1px solid rgba(42,32,24,.2)}
+.z-faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-family:var(--zen);font-size:clamp(21px,2.2vw,28px);line-height:1.2}
+.z-faq summary::-webkit-details-marker{display:none}
+.z-faq summary::after{content:"+";font-family:var(--display);font-weight:300;color:var(--coral);font-size:22px}
+.z-faq details[open] summary::after{content:"–"}
+.z-faq details p{margin-top:12px;max-width:62ch;font-size:15.5px;line-height:1.65;color:#5a4a3c}
+
+/* closing */
+.z-cta{background:var(--lilac);text-align:center}
+.z-cta .inner{padding-block:clamp(60px,7vw,100px);display:grid;justify-items:center;gap:22px}
+.z-cta h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(52px,9vw,140px);line-height:.95;letter-spacing:-.03em}
+.z-cta h2 em{display:block;font-style:italic;font-size:.42em;letter-spacing:-.01em;margin-top:.3em;color:#4a3d5c}
+.z-cta p{max-width:44ch;font-size:16.5px;color:#4a3d36}
+.z-cta .z-ctas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.z-cta .mail{font-family:var(--zen);font-style:italic;font-size:clamp(20px,2vw,26px);user-select:all;overflow-wrap:anywhere}
+.sym{color:var(--c3)}
+.z-who .lotus-c{color:#e7b7a0}.z-who .moon-c{color:var(--c7)}
+.z-prot .lotus-c{color:var(--c2)}.z-prot .moon-c{color:var(--c6)}
+.z-prot .sun{width:40px;height:40px}
+.om{font-family:"Noto Serif Devanagari",var(--zen);font-size:38px;line-height:1;color:var(--sage);display:block;height:40px}
+.om.big{font-size:54px;height:auto;color:#5d4c78}
+.z-syms{display:flex;gap:16px;justify-content:center;color:var(--sand)}
+.z-syms svg{width:26px;height:26px}
+.z-syms svg:nth-child(2){color:var(--c3)}
+.z-syms svg line{stroke:currentColor;stroke-width:1.1;stroke-linecap:round}
+
+/* services as an editorial list: soft aura instead of boxes */
+.z-list{display:grid;max-width:1080px;margin-inline:auto}
+.z-row{display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,1.05fr);gap:10px clamp(20px,4vw,56px);align-items:center;padding-block:clamp(22px,2.6vw,34px)}
+.z-row + .z-row{border-top:1px solid rgba(42,32,24,.12)}
+.z-aura{position:relative;width:84px;height:84px;display:grid;place-items:center}
+.z-aura::before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,var(--k) 0%,color-mix(in srgb,var(--k) 45%,transparent) 38%,transparent 70%);filter:blur(6px);opacity:.75}
+.z-aura span{position:relative;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.06em;color:var(--earth)}
+.z-row h3{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(28px,3vw,42px);line-height:1.02;letter-spacing:-.02em}
+.z-row p{font-size:16px;line-height:1.6;color:#5a4a3c}
+.z-row .tags{margin-top:8px;font-size:14px;color:#8a7a68}
+@media (max-width:760px){.z-row{grid-template-columns:64px minmax(0,1fr)}.z-row > div:last-child{grid-column:2}.z-aura{width:56px;height:56px}}
+.z-who .groups{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,5vw,72px);width:min(1000px,100%)}
+.z-who .groups div{display:grid;justify-items:center;gap:12px;align-content:start}
+.z-who .groups .sun{width:42px;height:42px}
+.z-who .groups p{white-space:nowrap;font-family:var(--zen);font-variant:small-caps;letter-spacing:.03em;font-size:clamp(19px,1.8vw,24px);line-height:1.6;color:var(--cream)}
+@media (max-width:700px){.z-who .groups{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+<header class="top wrap">
+  <div class="inner">
+    <a class="logo" href="#top">Daniela Partida</a>
+    <nav aria-label="Main">
+      <a href="#work" data-es="Proyectos">Work</a>
+      <a href="#experience" data-es="Experiencia">Experience</a>
+      <a href="#about" data-es="Sobre mí">About</a>
+      <a href="#contact" data-es="Contacto">Contact</a>
+      <span class="lang" role="group" aria-label="Language">
+        <button type="button" id="lang-en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-es" aria-pressed="false">ES</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero grain wrap" id="top" aria-label="Intro">
+    <img class="bg" src="hero-hands.jpg" alt="">
+    <div class="hero-mid">
+      <h1>Daniela Partida</h1>
+      <span class="mono" data-es="Estrategia de marketing<br>y dirección creativa<br>Con base en España">Marketing strategy<br>&amp; creative direction<br>Based in Spain</span>
+    </div>
+    <div class="hero-foot inner mono" style="width:100%">
+      <span data-es="Estrategia de marketing">Marketing strategy</span>
+      <span data-es="Dirección creativa">Creative direction</span>
+      <span data-es="Estrategia de marca">Brand strategy</span>
+      <span data-es="Comunicación y PR">Communications &amp; PR</span>
+      <span>Copywriting</span>
+      <span data-es="Gestión de proyectos">Project management</span>
+    </div>
+  </section>
+
+  <section class="manifesto yellow grain wrap" aria-label="Manifesto">
+    <div class="inner">
+      <div style="display:grid;gap:30px;min-width:0">
+        <h2 data-es="Crear,<em>conectar,</em>generar.">Create,<em>connect,</em>generate.</h2>
+        <p class="intro" data-es="Estratega de marketing y directora creativa, trabajando en España, México y más allá.">Marketing strategist and creative director, working in Spain, Mexico and beyond.</p>
+        <div class="man-meta mono">
+          <span data-es="Corporativo + freelance">Corporate + freelance</span>
+          <span data-es="7 industrias">7 industries</span>
+          <span data-es="Inglés + español">English + Spanish</span>
+          <span data-es="México → España">Mexico → Spain</span>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="dani.jpg" alt="Daniela Partida sitting on a chrome chair, smiling">
+        <span class="photo-cap mono">Daniela Partida · 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="nums wrap" aria-label="Results">
+    <div class="inner">
+      <div class="stat"><b>34.3K</b><span class="mono" data-es="Seguidores orgánicos en los primeros 8 meses, 0 € en anuncios">Organic followers in the first 8 months, 0 € in ads</span></div>
+      <div class="stat"><b>1.6M</b><span class="mono" data-es="Vistas en un solo reel">Views on a single reel</span></div>
+      <div class="stat"><b>700+</b><span class="mono" data-es="Asistentes a un programa de hospitalidad que creé">Guests at a hospitality program I created</span></div>
+      <div class="stat"><b>10</b><span class="mono" data-es="Marcas: estrategia, arquitectura de marca, contenido y eventos">Brands: strategy, brand architecture, content and events</span></div>
+      <div class="stat"><b>7</b><span class="mono" data-es="Industrias: deporte, hospitalidad, bienestar, salud, real estate, comida y bebida, lujo">Industries: sports, hospitality, wellness, healthcare, real estate, food &amp; beverage, luxury</span></div>
+    </div>
+  </section>
+
+  <section class="clients wrap" aria-label="Brands">
+    <div class="inner">
+      <span class="mono" data-es="Marcas con las que he trabajado">Brands I've worked with</span>
+      <p>Club Deportivo Guadalajara <i>/</i> Grupo Omnilife <i>/</i> Hotel El Dorado <i>/</i> El Camino al Interior <i>/</i> Dachvil <i>/</i> Innova Recovery House <i>/</i> Zara Loves Diamonds <i>/</i> Tai Nalai <i>/</i> AVT <i>/</i> Pivota</p>
+    </div>
+  </section>
+
+  <section class="band yellow wrap" id="services" aria-labelledby="h-disc">
+    <div class="inner">
+      <div class="head">
+        <h2 id="h-disc" data-es="Lo que<br>hago">What<br>I do</h2>
+        <p data-es="Diseño la estrategia y la llevo a cabo: del primer brief a los resultados finales.">I build the strategy and deliver the work, from the first brief to the final results.</p>
+      </div>
+      <div class="disc">
+        <div class="d"><span class="mono br" data-es="Estrategia">Strategy</span><h3 data-es="Estrategia de marketing">Marketing strategy</h3><p data-es="Planes de marketing con objetivos, canales y KPIs claros. Campañas y Meta Ads, de la segmentación al reporte de resultados.">Marketing plans with clear goals, channels and KPIs. Campaigns and Meta Ads, from targeting to performance reporting.</p></div>
+        <div class="d"><span class="mono br" data-es="Marca">Brand</span><h3 data-es="Estrategia e identidad de marca">Brand strategy &amp; identity</h3><p data-es="Posicionamiento, arquitectura de marca, identidad visual, tono de voz y storytelling para marcas nuevas y en crecimiento.">Positioning, brand architecture, visual identity, tone of voice and storytelling for new and growing brands.</p></div>
+        <div class="d"><span class="mono br">PR</span><h3 data-es="Comunicación y PR">Communications &amp; PR</h3><p data-es="Relación con stakeholders, patrocinadores y medios. Mensajes claros y consistentes para cada audiencia, interna y externa.">Stakeholder, sponsor and media relations. Clear, consistent messages for every audience, internal and external.</p></div>
+        <div class="d"><span class="mono br" data-es="Escritura">Writing</span><h3>Copywriting</h3><p data-es="Textos que suenan a la marca: redes, campañas, web, blog, email y LinkedIn. En español e inglés.">Copy that sounds like the brand: social, campaigns, websites, blogs, email and LinkedIn. In English and Spanish.</p></div>
+        <div class="d"><span class="mono br" data-es="Contenido">Content</span><h3 data-es="Contenido y dirección creativa">Content &amp; creative direction</h3><p data-es="Estrategia de contenido, calendarios, dirección de arte, diseño y edición de video, para que cada pieza se vea y suene como una sola marca.">Content strategy, calendars, art direction, design and video editing, so every piece looks and sounds like one brand.</p></div>
+        <div class="d"><span class="mono br" data-es="Operación">Operations</span><h3 data-es="Proyectos y eventos">Project &amp; event management</h3><p data-es="Proyectos de principio a fin: planeación, tiempos, proveedores y equipos. Eventos de 70 a 200+ invitados.">End-to-end delivery: planning, timelines, vendors and teams. Events for 70 to 200+ guests.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band wrap" id="work" aria-labelledby="h-work">
+    <div class="inner">
+      <div class="head">
+        <h2 id="h-work" data-es="Proyectos">Selected<br>work</h2>
+        <p data-es="Seis proyectos en deporte, bienestar, salud, real estate, lujo y comida. Cada uno con el reto, mi rol y resultados medibles.">Six projects across sports, wellness, healthcare, real estate, luxury and food. Each one with the challenge, my role and measurable results.</p>
+      </div>
+      <div class="rows" id="rows"></div>
+    </div>
+  </section>
+
+  <section class="band wrap" style="padding-top:0" aria-labelledby="h-reels">
+    <div class="inner">
+      <div class="head"><h2 id="h-reels" data-es="Dirección creativa<br>y video">Creative direction<br>&amp; video</h2><p data-es="Reels que dirigí, grabé y edité: del concepto y el guion a la edición final.">Reels I directed, shot and edited: from concept and script to the final cut.</p></div>
+      <div class="reels" id="reels"></div>
+    </div>
+  </section>
+
+  <section class="band wrap" id="experience" style="padding-top:0" aria-labelledby="h-xp">
+    <div class="inner">
+      <div class="head"><h2 id="h-xp" data-es="Experiencia">Experience</h2></div>
+      <div class="xp">
+        <div class="x">
+          <span class="when mono" data-es="Sep 2026 → hoy · contrato, medio tiempo">Sep 2026 → now · part-time contract</span>
+          <div><h3>Pivota</h3><p class="role mono" data-es="Creadora de contenido · real estate · remoto">Content creator · real estate · remote</p></div>
+          <ul>
+            <li data-es="Artículos de blog para marcas inmobiliarias">Blog articles for real estate brands</li>
+            <li data-es="Contenido y copys para redes sociales">Social media content and captions</li>
+            <li data-es="Campañas de email y newsletters">Email campaigns and newsletters</li>
+            <li data-es="Reportes de desempeño: qué funcionó, qué no y los siguientes pasos">Performance reports: what worked, what didn't and next steps</li>
+          </ul>
+        </div>
+        <div class="x">
+          <span class="when mono" data-es="Jul 2025 → hoy">Jul 2025 → now</span>
+          <div><h3 data-es="Freelance">Freelance</h3><p class="role mono" data-es="Estrategia de marketing y marca">Marketing &amp; brand strategy</p></div>
+          <ul>
+            <li data-es="Estrategias de marca y marketing digital para marcas de hospitalidad, bienestar, salud, real estate, F&amp;B y joyería">Brand and digital marketing strategies for hospitality, wellness, healthcare, real estate, F&amp;B and jewelry brands</li>
+            <li data-es="Estrategia de marketing y arquitectura de marca, incluyendo Hotel El Dorado">Marketing strategy and brand architecture, including Hotel El Dorado</li>
+            <li data-es="Conceptos de marca, identidad visual y storytelling para marcas emergentes">Brand concepts, visual identity and storytelling for emerging brands</li>
+            <li data-es="Dirección creativa: concepto, línea visual y producción de contenido">Creative direction: concept, visual line and content production</li>
+            <li data-es="Gestión de proyectos con cada cliente: planeación, tiempos, entregas y reportes">Project management for each client: planning, timelines, deliverables and reporting</li>
+            <li data-es="Calendarios de contenido y copywriting">Content calendars and copywriting</li>
+            <li data-es="Campañas de Meta Ads, de la segmentación al análisis">Meta Ads campaigns, from targeting to performance analysis</li>
+          </ul>
+        </div>
+        <div class="x">
+          <span class="when mono">Apr 2024 → Jun 2025</span>
+          <div><h3>Club Deportivo Guadalajara</h3><p class="role mono" data-es="Grupo Omnilife · Hospitalidad, marketing y eventos">Grupo Omnilife · Hospitality, marketing &amp; events</p></div>
+          <ul>
+            <li data-es="Creé la identidad y el posicionamiento de 1906 Hospitality">Built the identity and positioning of 1906 Hospitality</li>
+            <li data-es="Relación con clientes, marcas, stakeholders y familias de jugadores">Managed relationships with clients, brands, stakeholders and players' families</li>
+            <li data-es="Diseño y ejecución de experiencias VIP y eventos de 70 a 200+ personas">Designed and ran VIP experiences and events for 70 to 200+ people</li>
+            <li data-es="Redes sociales, materiales visuales y presentaciones estratégicas">Social media, visual materials and strategic presentations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach grain wrap" aria-label="Approach">
+    <img class="bg" src="water.jpg" alt="">
+    <div class="inner">
+      <h2 data-es="Creo conexiones reales entre marcas">I create real connections between brands</h2>
+      <h2 data-es="y personas, con estrategia, creatividad y experiencias.">and people through strategy, creativity and experiences.</h2>
+    </div>
+  </section>
+
+  <section class="band wrap" aria-labelledby="h-skills">
+    <div class="inner">
+      <div class="head"><h2 id="h-skills" data-es="Habilidades">Skills &amp;<br>tools</h2></div>
+      <div class="skills">
+        <div class="sk"><h3 data-es="Estratégicas">Strategic</h3><ul><li data-es="Branding y desarrollo de marca">Branding &amp; brand development</li><li data-es="Estrategia de marca">Brand strategy</li><li>Digital marketing</li><li data-es="Relaciones públicas">Public relations</li><li data-es="Estrategias de comunicación">Communication strategies</li><li data-es="Diseño de experiencias">Experience design</li></ul></div>
+        <div class="sk"><h3 data-es="Técnicas">Technical</h3><ul><li>Canva, Adobe, Figma, Framer</li><li>Meta Ads</li><li data-es="Edición de video (CapCut)">Video editing (CapCut)</li><li data-es="Gestión de redes sociales">Social media management</li><li data-es="Dirección creativa">Creative direction</li><li data-es="Gestión de proyectos">Project management</li></ul></div>
+        <div class="sk"><h3 data-es="Personales">Personal</h3><ul><li data-es="Creatividad">Creativity</li><li data-es="Colaboración entre áreas">Cross-functional collaboration</li><li data-es="Pensamiento estratégico">Strategic thinking</li><li data-es="Atención al detalle">Attention to detail</li><li data-es="Proactividad">Proactivity</li><li data-es="Inteligencia emocional">Emotional intelligence</li></ul></div>
+        <div class="sk"><h3 data-es="Idiomas">Languages</h3><ul><li data-es="Español · nativo">Spanish · native</li><li data-es="Inglés · profesional">English · professional</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band wrap" id="about" style="padding-top:0" aria-labelledby="h-about">
+    <div class="inner about">
+      <div class="portrait"><img src="portrait.jpg" alt="Portrait of Daniela Partida"></div>
+      <div class="about-txt">
+        <h2 id="h-about" data-es="Hola, soy Dani">Hi, I'm Dani</h2>
+        <p data-es="Soy profesional del marketing con experiencia en estrategia de marca, comunicación, relaciones públicas y marketing digital, liderando proyectos que crean conexiones significativas entre marcas y personas.">I am a marketing professional with experience in brand strategy, communications, public relations and digital marketing, leading projects that create meaningful connections between brands and people.</p>
+        <p data-es="Mi experiencia abarca entornos corporativos y freelance, donde he gestionado iniciativas en deporte, hospitalidad, bienestar, salud, real estate, comida y bebida, y marcas de lujo: desde la estrategia y la dirección creativa hasta la ejecución de campañas, la gestión de stakeholders y la estrategia y producción de contenido.">My experience spans both corporate and freelance environments, where I have managed initiatives across sports, hospitality, wellness, healthcare, real estate, food &amp; beverage and luxury brands, from strategy and creative direction to campaign execution, stakeholder management, and content strategy &amp; production.</p>
+        <p data-es="Combino pensamiento estratégico, creatividad y gestión de proyectos para construir marcas, desarrollar campañas de marketing, fortalecer el posicionamiento y crear experiencias que generan un impacto real en el negocio.">I combine strategic thinking, creativity and project management to build brands, develop marketing campaigns, strengthen brand positioning, and create experiences that generate meaningful business impact.</p>
+        <div class="off">
+          <span class="mono" style="color:var(--mute)" data-es="Fuera del trabajo">Off the clock</span>
+          <span class="chip" data-es="El océano">The ocean</span>
+          <span class="chip" data-es="Naturaleza">Nature</span>
+          <span class="chip" data-es="Meditación">Meditation</span>
+          <span class="chip" data-es="Conocer otras culturas">Learning other cultures</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band wrap" style="padding-top:0" aria-labelledby="h-vis">
+    <div class="inner">
+      <div class="head"><h2 id="h-vis" data-es="Diseño de<br>contenido">Content<br>design</h2><p data-es="Piezas reales que diseñé para clientes: redes, impresos y web.">Real pieces I designed for clients: social, print and web.</p></div>
+      <div class="strip">
+        <figure><img src="da-1.jpg" alt="Dachvil carousel about choosing a home" loading="lazy"><figcaption class="mono">Dachvil · carousel</figcaption></figure>
+        <figure><img src="tn-2.jpg" alt="Tai Nalai Thai your time post" loading="lazy"><figcaption class="mono">Tai Nalai · post</figcaption></figure>
+        <figure><img src="ca-lirio.jpg" alt="El Camino al Interior post: Todo lo que vives tiene un propósito en tu camino" loading="lazy"><figcaption class="mono">El Camino al Interior · post</figcaption></figure>
+        <figure><img src="da-3.jpg" alt="Dachvil post about location and investment" loading="lazy"><figcaption class="mono">Dachvil · post</figcaption></figure>
+        <figure><img src="tn-1.jpg" alt="Tai Nalai Thai tea splash photo" loading="lazy"><figcaption class="mono" data-es="Tai Nalai · producto">Tai Nalai · product</figcaption></figure>
+        <figure><img src="avt.jpg" alt="AVT logistics website design" loading="lazy"><figcaption class="mono" data-es="Web · AVT">Website · AVT</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="open yellow grain wrap" aria-labelledby="h-svc">
+    <div class="inner">
+      <div class="open-top mono"><span id="h-svc" data-es="Disponible para">Open to</span><span data-es="En español o inglés · remoto">English or Spanish · remote</span></div>
+      <a class="open-row" href="#contact">
+        <span class="open-n">01</span>
+        <span class="open-t" data-es="Proyectos freelance">Freelance projects</span>
+        <span class="open-d" data-es="Estrategia, marca, copy, dirección creativa o eventos. Por proyecto o mensual.">Strategy, brand, copy, creative direction or events. By project or monthly.</span>
+      </a>
+      <a class="open-row" href="#contact">
+        <span class="open-n">02</span>
+        <span class="open-t" data-es="Puestos remotos">Remote roles</span>
+        <span class="open-d" data-es="Marketing, comunicación, PR, contenido o gestión de proyectos. Medio tiempo, contrato o tiempo completo flexible.">Marketing, communications, PR, content or project management. Part-time, contract or flexible full-time.</span>
+      </a>
+      <a class="open-row" href="#contact">
+        <span class="open-n">03</span>
+        <span class="open-t" data-es="Colaboraciones">Collaborations</span>
+        <span class="open-d" data-es="Agencias y equipos que necesitan apoyo estratégico y creativo.">Agencies and teams that need strategic and creative support.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="band wrap" aria-labelledby="h-kind" hidden>
+    <div class="inner">
+      <div class="head"><h2 id="h-kind" data-es="Lo que<br>dicen">Kind<br>words</h2><p data-es="Testimonios pendientes.">Testimonials pending.</p></div>
+      <div class="quotes">
+        <figure class="quote"><p data-es="[Testimonio de Dachvil]">[Testimonial from Dachvil]</p><figcaption class="mono">Dachvil · Real estate</figcaption></figure>
+        <figure class="quote"><p data-es="[Testimonio de Innova Recovery House]">[Testimonial from Innova Recovery House]</p><figcaption class="mono">Innova · Healthcare</figcaption></figure>
+        <figure class="quote"><p data-es="[Testimonio de un manager de Chivas]">[Testimonial from a Chivas manager]</p><figcaption class="mono">Club Deportivo Guadalajara</figcaption></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main id="case" hidden></main>
+
+<main id="spiritual-view" hidden>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><line x1="36.0" y1="24.0" x2="45.0" y2="24.0"/><line x1="35.5" y1="28.8" x2="39.7" y2="30.5"/><line x1="32.5" y1="32.5" x2="38.8" y2="38.8"/><line x1="28.8" y1="35.5" x2="30.5" y2="39.7"/><line x1="24.0" y1="36.0" x2="24.0" y2="45.0"/><line x1="19.2" y1="35.5" x2="17.5" y2="39.7"/><line x1="15.5" y1="32.5" x2="9.2" y2="38.8"/><line x1="12.5" y1="28.8" x2="8.3" y2="30.5"/><line x1="12.0" y1="24.0" x2="3.0" y2="24.0"/><line x1="12.5" y1="19.2" x2="8.3" y2="17.5"/><line x1="15.5" y1="15.5" x2="9.2" y2="9.2"/><line x1="19.2" y1="12.5" x2="17.5" y2="8.3"/><line x1="24.0" y1="12.0" x2="24.0" y2="3.0"/><line x1="28.8" y1="12.5" x2="30.5" y2="8.3"/><line x1="32.5" y1="15.5" x2="38.8" y2="9.2"/><line x1="35.5" y1="19.2" x2="39.7" y2="17.5"/></g></symbol><symbol id="moon" viewBox="0 0 48 48"><path d="M31 8.5A15.5 15.5 0 1 0 31 39.5A12.5 12.5 0 1 1 31 8.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol><symbol id="lotus" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"><path d="M24 9C30 17 30 28 24 36C18 28 18 17 24 9Z"/><path d="M24 36C15 34 10 26 10 18C17 20 22 27 24 36Z"/><path d="M24 36C33 34 38 26 38 18C31 20 26 27 24 36Z"/><path d="M24 37C16 38.5 8 35.5 4 29.5C12 28.5 19 31 24 37Z"/><path d="M24 37C32 38.5 40 35.5 44 29.5C36 28.5 29 31 24 37Z"/><path d="M14 41H34"/></g></symbol></defs></svg>
+
+  <section class="z-hero grain wrap" aria-labelledby="h-sp">
+    <img class="bg" src="hero.jpg" alt="">
+    <div class="inner">
+      <svg class="sun" aria-hidden="true"><use href="#sun"/></svg>
+      <span class="z-label z-brace" data-es="Daniela Partida · marketing consciente">Daniela Partida · conscious marketing</span>
+      <h1 id="h-sp" data-es="Marketing para <em>marcas espirituales</em>">Marketing for <em>spiritual brands</em></h1>
+      <p data-es="Estrategia, marca, relaciones públicas y contenido para terapeutas, sanadoras, guías y marcas conscientes que quieren crecer sin perder su esencia.">Strategy, brand, PR and content for therapists, healers, guides and conscious brands who want to grow without losing their essence.</p>
+      <div class="z-ctas">
+        <a class="z-btn solid" href="#sp-contact" data-es="Hablemos">Let's talk</a>
+        <a class="z-btn" href="#sp-services" data-es="Cómo te ayudo">How I help</a>
+      </div>
+    </div>
+    <div class="z-hero-foot inner">
+      <a class="z-label" href="#top" data-es="← Portafolio completo">← Full portfolio</a>
+      <div class="chakra" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="z-label" data-es="Español + inglés">English + Spanish</span>
+    </div>
+  </section>
+
+  <section class="z-about wrap" aria-labelledby="h-sp-about">
+    <div class="inner">
+      <span class="z-label z-brace" data-es="sobre esto">about</span>
+      <div>
+        <h2 id="h-sp-about" data-es="Tu trabajo es sagrado. <em>Tu marketing también puede serlo.</em>">Your work is sacred. <em>Your marketing can be too.</em></h2>
+        <div class="cols">
+          <p data-es="Conozco este mundo desde dentro. Tus clientes no buscan un servicio: buscan sentirse vistos, acompañados y seguros antes de dar el primer paso.">I know this world from the inside. Your clients aren't looking for a service: they want to feel seen, held and safe before they take the first step.</p>
+          <p data-es="Por eso no hago marketing de urgencia ni de miedo. Construyo marcas con una voz clara, una estética que transmite tu energía y una estrategia que lleva a las personas correctas, con calma, hasta ti.">So I don't do urgency or fear-based marketing. I build brands with a clear voice, a visual world that carries your energy, and a strategy that gently brings the right people to you.</p>
+        </div>
+      </div>
+    </div>
+    <div class="inner z-strip">
+      <img src="ca-almas.jpg" alt="El Camino al Interior post" loading="lazy">
+      <img src="water.jpg" alt="" loading="lazy">
+      <img src="ca-lirio.jpg" alt="El Camino al Interior post" loading="lazy">
+      <img src="ca-flor.jpg" alt="El Camino al Interior post" loading="lazy">
+    </div>
+  </section>
+
+  <section class="z-who wrap" aria-labelledby="h-sp-who">
+    <div class="inner">
+      <span class="z-label z-brace" id="h-sp-who" data-es="con quién trabajo">who I work with</span>
+      <p class="lead" data-es="Para quienes sostienen el espacio de otros.">For those who hold space for others.</p>
+      <div class="groups">
+        <div><svg class="sun sym lotus-c" aria-hidden="true"><use href="#lotus"/></svg><span class="z-label" data-es="Sanar">Heal</span><p data-es="Terapeutas holísticas<br>Sanación energética y reiki<br>Centros de bienestar">Holistic therapists<br>Energy healing &amp; reiki<br>Wellness centers</p></div>
+        <div><svg class="sun sym moon-c" aria-hidden="true"><use href="#moon"/></svg><span class="z-label" data-es="Guiar">Guide</span><p data-es="Astrología y tarot<br>Coaches y guías<br>Yoga y meditación">Astrology &amp; tarot<br>Coaches &amp; guides<br>Yoga &amp; meditation</p></div>
+        <div><svg class="sun" aria-hidden="true"><use href="#sun"/></svg><span class="z-label" data-es="Crear">Create</span><p data-es="Retiros y círculos<br>Talleres y cursos<br>Productos conscientes">Retreats &amp; circles<br>Workshops &amp; courses<br>Conscious products</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="z-svc wrap" id="sp-services" aria-labelledby="h-sp-svc">
+    <div class="inner">
+      <div class="z-head">
+        <div class="z-syms" aria-hidden="true"><svg><use href="#moon"/></svg><svg><use href="#sun"/></svg><svg><use href="#lotus"/></svg></div>
+        <span class="z-label z-brace" data-es="servicios">services</span>
+        <h2 id="h-sp-svc" data-es="Cómo puedo <em>acompañarte</em>">How I can <em>support you</em></h2>
+        <p data-es="Más que redes sociales: estrategia, marca, comunicación y lanzamientos. Puedes empezar por una parte o hacerlo todo conmigo.">More than social media: strategy, brand, communications and launches. Start with one piece or do it all with me.</p>
+      </div>
+      <div class="z-list">
+        <div class="z-row" style="--k:var(--c2)"><div class="z-aura"><span>01</span></div><h3 data-es="Estrategia de marketing">Marketing strategy</h3><div><p data-es="Un plan claro de a dónde quieres llegar y cómo hacerlo.">A clear plan for where you want to go and how to get there.</p><p class="tags" data-es="Objetivos y KPIs, oferta y público, plan trimestral.">Goals and KPIs, offer and audience, quarterly plan.</p></div></div>
+        <div class="z-row" style="--k:var(--c3)"><div class="z-aura"><span>02</span></div><h3 data-es="Marca e identidad">Brand &amp; identity</h3><div><p data-es="Una marca que se siente como tú y se reconoce al instante.">A brand that feels like you and is recognized at a glance.</p><p class="tags" data-es="Posicionamiento, historia, tono de voz y lenguaje visual.">Positioning, story, tone of voice and visual language.</p></div></div>
+        <div class="z-row" style="--k:var(--c5)"><div class="z-aura"><span>03</span></div><h3 data-es="Relaciones públicas y comunicación">PR &amp; communications</h3><div><p data-es="Para llegar a personas más allá de tus seguidores.">To reach people beyond your followers.</p><p class="tags" data-es="Medios, podcasts, colaboraciones con marcas afines y mensajes clave.">Media, podcasts, partnerships with aligned brands and key messages.</p></div></div>
+        <div class="z-row" style="--k:var(--c4)"><div class="z-aura"><span>04</span></div><h3 data-es="Contenido y redes">Content &amp; social</h3><div><p data-es="Contenido constante sin que tengas que pensarlo cada día.">Consistent content without having to think about it every day.</p><p class="tags" data-es="Estrategia, calendario, copys, diseño y reels.">Strategy, calendar, copy, design and reels.</p></div></div>
+        <div class="z-row" style="--k:var(--c6)"><div class="z-aura"><span>05</span></div><h3 data-es="Lanzamientos, retiros y eventos">Launches, retreats &amp; events</h3><div><p data-es="De la idea al día del evento, con experiencia en grupos de 70 a 200+ personas.">From the idea to the day itself, with experience running events for 70 to 200+ people.</p><p class="tags" data-es="Talleres, cursos y retiros: logística y promoción.">Workshops, courses and retreats: logistics and promotion.</p></div></div>
+        <div class="z-row" style="--k:var(--c7)"><div class="z-aura"><span>06</span></div><h3 data-es="Comunidad y reservas">Community &amp; bookings</h3><div><p data-es="Para que tus seguidores se conviertan en sesiones reales.">So your followers turn into real sessions.</p><p class="tags" data-es="Camino a WhatsApp o tu agenda, newsletter y reporte mensual.">Path to WhatsApp or your booking page, newsletter and monthly report.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="z-proc wrap" aria-labelledby="h-sp-proc">
+    <div class="inner">
+      <span class="z-label z-brace" data-es="proceso">process</span>
+      <h2 id="h-sp-proc" data-es="Cómo trabajamos">How we work</h2>
+      <div class="rings">
+        <div class="ring"><div class="c"><span data-es="Escuchar">Listen</span></div><p data-es="Conozco tu práctica, tu historia y a quién quieres llegar.">I get to know your practice, your story and who you want to reach.</p></div>
+        <div class="ring"><div class="c"><span data-es="Dar forma">Shape</span></div><p data-es="Definimos estrategia, voz y estética. Nada sale sin que lo sientas tuyo.">We define strategy, voice and aesthetic. Nothing goes out until it feels like you.</p></div>
+        <div class="ring"><div class="c"><span data-es="Crear">Create</span></div><p data-es="Contenido, comunicación y lanzamientos con entregas claras.">Content, communications and launches with clear deliveries.</p></div>
+        <div class="ring"><div class="c"><span data-es="Crecer">Grow</span></div><p data-es="Medimos, ajustamos y convertimos comunidad en reservas.">We measure, adjust and turn community into bookings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="z-proof wrap" id="sp-proof" aria-labelledby="h-sp-proof">
+    <div class="inner">
+      <div class="vids">
+        <video src="ca-reel.mp4" poster="ca-reel-poster.jpg" muted loop playsinline preload="none" aria-label="El Camino al Interior reel, 1.6M views"></video>
+        <video src="ca-raiz.mp4" poster="ca-raiz-poster.jpg" muted loop playsinline preload="none" aria-label="El Camino al Interior reel"></video>
+      </div>
+      <div>
+        <span class="z-label z-brace" data-es="caso">case study</span>
+        <h2 id="h-sp-proof">El Camino <em data-es="al Interior">al Interior</em></h2>
+        <p style="margin-top:10px;opacity:.75" data-es="Vero Milanés, terapeuta holística">Vero Milanés, holistic therapist</p>
+        <div class="z-nums">
+          <div><b>0 → 34.3K</b><span data-es="Seguidores en los primeros 8 meses, 100% orgánico">Followers in the first 8 months, 100% organic</span></div>
+          <div><b>1.6M</b><span data-es="Vistas en un solo reel">Views on a single reel</span></div>
+          <div><b>19.4K</b><span data-es="Veces compartido ese reel">Shares on that reel</span></div>
+          <div><b>0 €</b><span data-es="Invertidos en anuncios">Spent on ads</span></div>
+        </div>
+        <p class="q" data-es="Creé el concepto, la voz y el lenguaje visual, escribí cada copy y edité cada reel. La comunidad se convirtió en sesiones reservadas por WhatsApp.">I created the concept, the voice and the visual language, wrote every caption and edited every reel. The community turned into sessions booked on WhatsApp.</p>
+        <div class="links">
+          <a class="z-btn" href="#case-camino" data-es="Caso completo →">Full case →</a>
+          <a class="z-btn" href="https://www.instagram.com/reel/DTNyQIKkVus/" target="_blank" rel="noopener" data-es="Ver el reel ↗">See the reel ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="z-prot wrap" aria-labelledby="h-sp-prot">
+    <div class="inner">
+      <div class="z-head"><span class="z-label z-brace" data-es="lo que cuido">what I protect</span><h2 id="h-sp-prot" data-es="Con <em>cuidado</em>">With <em>care</em></h2></div>
+      <div class="z-three">
+        <div><svg class="sun sym lotus-c" aria-hidden="true"><use href="#lotus"/></svg><h3 data-es="Tu esencia">Your essence</h3><p data-es="Tu marca suena a ti, no a una plantilla. Respeto tu práctica y tu lenguaje.">Your brand sounds like you, not a template. I respect your practice and your language.</p></div>
+        <div><span class="om" aria-hidden="true">ॐ</span><h3 data-es="La ética">Ethics</h3><p data-es="Sin promesas milagro, sin presión ni miedo. Comunicación honesta para personas en momentos sensibles.">No miracle promises, no pressure, no fear. Honest communication for people in tender moments.</p></div>
+        <div><svg class="sun sym moon-c" aria-hidden="true"><use href="#moon"/></svg><h3 data-es="Tu energía">Your energy</h3><p data-es="Procesos simples y entregas claras, para que el marketing no te quite tiempo de tus sesiones.">Simple processes and clear deliveries, so marketing doesn't take time from your sessions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="z-faq wrap" aria-labelledby="h-sp-faq">
+    <div class="inner">
+      <div class="z-head"><span class="z-label z-brace" data-es="preguntas">questions</span><h2 id="h-sp-faq" data-es="Preguntas <em>frecuentes</em>">Common <em>questions</em></h2></div>
+      <details><summary data-es="¿Solo haces redes sociales?">Do you only do social media?</summary><p data-es="No. También hago estrategia de marketing, marca, relaciones públicas, colaboraciones y lanzamientos de talleres, retiros o productos. Las redes son una parte del plan.">No. I also work on marketing strategy, brand, PR, partnerships and launches for workshops, retreats or products. Social media is one part of the plan.</p></details>
+      <details><summary data-es="¿Necesito tener una marca ya creada?">Do I need to have a brand already?</summary><p data-es="No. Puedo acompañarte desde cero, como con El Camino al Interior, o ayudarte a ordenar y elevar lo que ya tienes.">No. I can start with you from zero, like with El Camino al Interior, or help you refine and elevate what you already have.</p></details>
+      <details><summary data-es="¿Puedo contratarte solo para un lanzamiento o evento?">Can I hire you for just one launch or event?</summary><p data-es="Sí. Puedo acompañarte en un proyecto puntual, como un retiro, un taller o un curso, o de forma mensual.">Yes. I can support you on a single project, like a retreat, workshop or course, or on a monthly basis.</p></details>
+      <details><summary data-es="¿Qué necesito darte para empezar?">What do you need from me to start?</summary><p data-es="Una llamada para conocerte y, si los tienes, fotos, videos o textos que ya uses. A partir de ahí yo organizo el resto.">A call to get to know you and, if you have them, photos, videos or texts you already use. From there, I organize the rest.</p></details>
+      <details><summary data-es="¿Trabajas en español e inglés?">Do you work in English and Spanish?</summary><p data-es="Sí. Escribo y creo en los dos idiomas, para marcas en España, México o cualquier lugar.">Yes. I write and create in both languages, for brands in Spain, Mexico or anywhere else.</p></details>
+      <details><summary data-es="¿Cómo empezamos?">How do we start?</summary><p data-es="Escríbeme y agendamos una llamada corta, sin compromiso. Te cuento qué haría con tu marca.">Write to me and we'll book a short call, no commitment. I'll tell you what I'd do with your brand.</p></details>
+    </div>
+  </section>
+
+  <section class="z-cta wrap" id="sp-contact" aria-labelledby="h-sp-cta">
+    <div class="inner">
+      <span class="om big" aria-hidden="true">ॐ</span>
+      <h2 id="h-sp-cta" data-es="Hablemos. <em>Con calma, sin compromiso.</em>">Let's talk. <em>Calmly, no commitment.</em></h2>
+      <p data-es="Cuéntame de tu práctica y en qué momento está tu marca.">Tell me about your practice and where your brand is right now.</p>
+      <a class="mail" href="mailto:danielapartida8@gmail.com" style="text-decoration:none">danielapartida8@gmail.com</a>
+      <div class="z-ctas">
+        <a class="z-btn dark js-wa js-wa-c" href="#sp-contact" hidden>WhatsApp</a>
+        <a class="z-btn dark js-book" href="#sp-contact" hidden data-es="Agendar llamada">Book a call</a>
+        <a class="z-btn dark" href="mailto:danielapartida8@gmail.com" data-es="Escríbeme un email">Email me</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact grain wrap" id="contact" aria-labelledby="h-contact">
+  <img class="bg" src="water2.jpg" alt="">
+  <div class="inner">
+    <h2 id="h-contact" data-es="Hablemos.">Let's talk.</h2>
+    <p style="font-size:clamp(18px,1.8vw,22px);max-width:44ch" data-es="Disponible para proyectos freelance y puestos remotos. Escríbeme con tu proyecto o vacante.">Available for freelance projects and remote roles. Send me your project or open position.</p>
+    <div class="c-row">
+      <span class="email" id="email">danielapartida8@gmail.com</span>
+      <div class="btns">
+        <a class="btn wa js-wa js-wa-c" href="#contact" hidden>WhatsApp</a>
+        <a class="btn js-book" href="#contact" hidden data-es="Agendar llamada">Book a call</a>
+        <button class="btn primary" type="button" id="copy" data-es="Copiar email">Copy email</button>
+        <a class="btn" href="https://www.linkedin.com/in/daniela-partida8" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" id="cv-btn" href="Daniela-Partida-CV-EN.pdf" download data-es="Descargar CV">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="inner mono"><span>© 2026 Daniela Partida</span></div>
+</footer>
+
+<script>
+(function(){
+var L='en';
+var C={
+chivas:{tint:'t-stadium',img:'ch-stadium',title:'1906 Hospitality',who:{en:'Club Deportivo Guadalajara · Grupo Omnilife',es:'Club Deportivo Guadalajara · Grupo Omnilife'},
+ chips:{en:['Brand strategy','Events','PR','Project management'],es:['Estrategia de marca','Eventos','PR','Gestión de proyectos']},
+ res:{en:'Built a hospitality area from zero: 700+ guests, 10+ events',es:'Construí un área de hospitalidad desde cero: 700+ invitados, 10+ eventos'},
+ meta:{en:[['Client','Chivas · Grupo Omnilife'],['Industry','Sports & hospitality'],['Dates','Apr 2024 → Jun 2025'],['My role','Hospitality, brand & events']],es:[['Cliente','Chivas · Grupo Omnilife'],['Industria','Deporte y hospitalidad'],['Fechas','Abr 2024 → jun 2025'],['Mi rol','Hospitalidad, marca y eventos']]},
+ ctx:{en:['Club Deportivo Guadalajara (Chivas) is one of Mexico\'s biggest football clubs. 1906 Hospitality is its internal hospitality department: it takes care of players, coaching staff, executives and special guests on match days and at club events.','When I joined, the area had no name recognition, no visual identity and no presence inside or outside the club. My job was to develop its concept, identity and visibility, and to create and run the experiences in the Hospitality Room and at club events.'],
+      es:['El Club Deportivo Guadalajara (Chivas) es uno de los clubes de fútbol más grandes de México. 1906 Hospitality es su área de hospitalidad interna: atiende a jugadores, cuerpo técnico, directivos e invitados especiales en partidos y eventos del club.','Cuando llegué, el área no era conocida, no tenía identidad visual ni presencia dentro o fuera del club. Mi trabajo fue desarrollar su concepto, identidad y visibilidad, y crear y operar las experiencias en el Hospitality Room y en los eventos del club.']},
+ did:{en:['Developed the visual identity and positioning of 1906 Hospitality.','Launched and managed the @1906.hospitality social media account.','Designed themed environments and hospitality experiences for match days, with about 70 guests per event.','Created "Tercer Tiempo", a post-match program where U-19 and U-23 players from rival clubs share a meal after the game, to promote fair play and camaraderie.','Produced two media football tournaments in Guadalajara and Mexico City for 200+ attendees: sponsors, live operations, welcome kits and branded uniforms.','Directed two "Champions" celebrations for the Tapatío team, plus a cultural dinner for international guests and a stakeholder appreciation dinner with interactive art.'],
+      es:['Desarrollé la identidad visual y el posicionamiento de 1906 Hospitality.','Lancé y gestioné la cuenta de redes @1906.hospitality.','Diseñé ambientaciones y experiencias de hospitalidad para días de partido, con unos 70 invitados por evento.','Creé "Tercer Tiempo", un programa post-partido donde jugadores Sub-19 y Sub-23 de clubes rivales comparten una comida, para promover el juego limpio y la convivencia.','Produje dos torneos de fútbol de medios en Guadalajara y CDMX para 200+ asistentes: patrocinadores, operación en vivo, kits de bienvenida y uniformes.','Dirigí dos celebraciones de "Campeones" para el equipo Tapatío, una cena cultural para invitados internacionales y una cena de agradecimiento a stakeholders con arte interactivo.']},
+ nums:{en:[['700+','Guests at Tercer Tiempo (about 140 per event)'],['10+','Events executed'],['200+','Attendees per media tournament'],['70','VIP guests per match-day gathering']],es:[['700+','Invitados en Tercer Tiempo (unos 140 por evento)'],['10+','Eventos ejecutados'],['200+','Asistentes por torneo de medios'],['70','Invitados VIP por día de partido']]},
+ imp:{en:['Gave identity and visibility to an area that had none.','Created a space where players, families and stakeholders connect.','Positioned the club as a benchmark for sports hospitality in Mexico.'],es:['Le di identidad y visibilidad a un área que no la tenía.','Creé un espacio de conexión entre jugadores, familias y stakeholders.','Posicioné al club como referente de hospitalidad deportiva en México.']},
+ gal:['ch-room','ch-team','ch-crest','ch-cake','ch-crowd','ch-tt1','ch-tt2','ch-trophy','ch-champs','ch-dj','ch-ribbons','ch-wall']},
+camino:{tint:'t-ocean',img:'ocean',title:'El Camino al Interior',who:{en:'Wellness & spiritual growth',es:'Bienestar y crecimiento espiritual'},
+ chips:{en:['Brand concept','Content strategy','Copywriting','Organic growth'],es:['Concepto de marca','Estrategia de contenido','Copywriting','Crecimiento orgánico']},
+ res:{en:'0 → 34.3K followers in the first 8 months, 100% organic',es:'0 → 34.3K seguidores en los primeros 8 meses, 100% orgánico'},
+ meta:{en:[['Client','Vero Milanés, holistic therapist'],['Industry','Wellness'],['Growth','First 8 months'],['My role','Brand, strategy, content, growth']],es:[['Cliente','Vero Milanés, terapeuta holística'],['Industria','Bienestar'],['Crecimiento','Primeros 8 meses'],['Mi rol','Marca, estrategia, contenido, crecimiento']]},
+ ctx:{en:['El Camino al Interior is the brand of Vero Milanés, a therapist who offers emotional and spiritual healing sessions and holistic therapies.','She started with no online presence. The goal was to build a brand and a community from scratch, and turn that audience into booked sessions through WhatsApp, without paying for ads.'],
+      es:['El Camino al Interior es la marca de Vero Milanés, terapeuta que ofrece sesiones de sanación emocional y espiritual y terapias holísticas.','Empezó sin presencia digital. La meta era construir una marca y una comunidad desde cero, y convertir esa audiencia en sesiones agendadas por WhatsApp, sin pagar anuncios.']},
+ did:{en:['Created the brand concept and identity: a cosmic, cinematic visual language for emotional healing.','Defined the content strategy and its pillars: reflections, astrology, healing processes and her story.','Wrote the copy and designed and edited every post and reel (CapCut).','Grew the community 100% organically and connected it to her booking channel on WhatsApp.'],
+      es:['Creé el concepto e identidad de marca: un lenguaje visual cósmico y cinematográfico para la sanación emocional.','Definí la estrategia de contenido y sus pilares: reflexiones, astrología, procesos de sanación y su historia.','Escribí los copys y diseñé y edité cada post y reel (CapCut).','Hice crecer la comunidad 100% orgánico y la conecté con su canal de reservas por WhatsApp.']},
+ nums:{en:[['34.3K','Followers, from zero'],['1.6M','Monthly views (March 2025)'],['1.4M','Views in 30 days'],['406K','Views on the top post'],['1.6M','Views on one reel'],['69.7K','Likes on that reel'],['19.4K','Shares on that reel'],['0 €','Spent on ads']],es:[['34.3K','Seguidores, desde cero'],['1.6M','Vistas al mes (marzo 2025)'],['1.4M','Vistas en 30 días'],['406K','Vistas en el mejor post'],['1.6M','Vistas en un reel'],['69.7K','Likes en ese reel'],['19.4K','Veces compartido ese reel'],['0 €','Invertidos en anuncios']]},
+ imp:{en:['Built a brand and an active community from zero.','Turned followers into direct bookings for her services.','Positioned the brand inside the spiritual and wellness niche.'],es:['Construí una marca y una comunidad activa desde cero.','Convertí seguidores en reservas directas de sus servicios.','Posicioné la marca dentro del nicho espiritual y de bienestar.']},
+ gal:['ca-almas','ca-reel','ca-raiz.mp4','ca-lirio','ca-flor','ca-reel2.mp4','ca-grid2']},
+dachvil:{tint:'t-sky',img:'da-building2',pos:'40% 60%',title:'Dachvil',who:{en:'Real estate',es:'Real estate'},
+ chips:{en:['Content strategy','Copywriting','Blog + LinkedIn','Social'],es:['Estrategia de contenido','Copywriting','Blog + LinkedIn','Redes']},
+ res:{en:'15.8K monthly views within the first 2 months',es:'15.8K vistas al mes en los primeros 2 meses'},
+ meta:{en:[['Client','Dachvil Espacio Inmobiliario'],['Industry','Real estate'],['Results in','First 2 months'],['My role','Content strategy & copywriting']],es:[['Cliente','Dachvil Espacio Inmobiliario'],['Industria','Real estate'],['Resultados en','Primeros 2 meses'],['Mi rol','Estrategia de contenido y copywriting']]},
+ ctx:{en:['Dachvil is a real estate agency with more than 14 years of experience buying, selling and renting homes.','In a crowded, competitive market, they needed content that builds trust and makes people picture their next home, not just another property listing.'],
+      es:['Dachvil es una inmobiliaria con más de 14 años de experiencia en compra, venta y renta de casas.','En un mercado saturado y competido, necesitaban contenido que genere confianza y haga que la gente se imagine en su próximo hogar, no solo otro anuncio de propiedad.']},
+ did:{en:['Built the content strategy, combining aesthetics, useful information and aspiration.','Created educational carousels on location, investment and how to choose a property.','Produced property reels and content that shows the team behind the brand.','Write their blog articles and LinkedIn posts.'],
+      es:['Creé la estrategia de contenido, combinando estética, información útil y aspiración.','Creé carruseles educativos sobre ubicación, inversión y cómo elegir una propiedad.','Produje reels de propiedades y contenido que muestra al equipo detrás de la marca.','Escribo sus artículos de blog y publicaciones de LinkedIn.']},
+ nums:{en:[['15.8K','Monthly views'],['440','Monthly interactions'],['+20/mo','Steady follower growth'],['1,186','Followers']],es:[['15.8K','Vistas al mes'],['440','Interacciones al mes'],['+20/mes','Crecimiento constante'],['1,186','Seguidores']]},
+ imp:{en:['Consistent growth and engagement within the first 2 months, in a competitive market.'],es:['Crecimiento y engagement constantes en los primeros 2 meses, en un mercado competido.']},
+ gal:['da-building2','da-cita','da-01','da-02','da-1','da-office','da-2','da-3','da-grid']},
+innova:{tint:'t-pillow',img:'in-room',pos:'50% 62%',title:'Innova Recovery House',who:{en:'Post-surgery healthcare',es:'Salud post-quirúrgica'},
+ chips:{en:['Brand communication','Content','Print'],es:['Comunicación de marca','Contenido','Impresos']},
+ res:{en:'80.2K views on the top video',es:'80.2K vistas en el mejor video'},
+ meta:{en:[['Client','Innova Recovery House'],['Industry','Healthcare'],['Focus','Patient trust'],['My role','Strategy, content & design']],es:[['Cliente','Innova Recovery House'],['Industria','Salud'],['Enfoque','Confianza del paciente'],['Mi rol','Estrategia, contenido y diseño']]},
+ ctx:{en:['Innova is a recovery home where patients stay after plastic surgery, with nurses available 24 hours and therapies like lymphatic drainage.','People choose where to recover based on trust. The content had to make the place feel safe, close and clear before patients ever visit.'],
+      es:['Innova es una casa de recuperación donde los pacientes se quedan después de una cirugía plástica, con enfermeras 24 horas y terapias como drenaje linfático.','La gente elige dónde recuperarse por confianza. El contenido tenía que hacer que el lugar se sintiera seguro, cercano y claro antes de visitarlo.']},
+ did:{en:['Defined a communication tone built on trust, closeness and clarity.','Created reels featuring the real nursing team and spaces.','Designed print and digital materials with services, location and nearby hospitals.'],
+      es:['Definí un tono de comunicación basado en confianza, cercanía y claridad.','Creé reels con el equipo real de enfermería y los espacios.','Diseñé materiales impresos y digitales con servicios, ubicación y hospitales cercanos.']},
+ nums:{en:[['80.2K','Views on the top video'],['16.5K','Views on high-performing posts'],['2.6K–16.5K','Consistent views per post'],['2.4K','Followers']],es:[['80.2K','Vistas en el mejor video'],['16.5K','Vistas en posts destacados'],['2.6K–16.5K','Vistas constantes por post'],['2.4K','Seguidores']]},
+ imp:{en:['Strong, consistent community growth for a sensitive, trust-based service.'],es:['Crecimiento sólido y constante para un servicio sensible que depende de la confianza.']},
+ gal:['in-room','in-team','in-collage1','in-flyer','in-treat','in-collage2','in-hooks','in-garden','in-grid']},
+zara:{tint:'t-sand',img:'za-rings',pos:'50% 48%',title:'Zara Loves Diamonds',who:{en:'Fine jewelry',es:'Alta joyería'},
+ chips:{en:['Brand voice','Meta Ads','Content'],es:['Voz de marca','Meta Ads','Contenido']},
+ res:{en:'80.3K monthly views, 52.9K on the top video',es:'80.3K vistas al mes, 52.9K en el mejor video'},
+ meta:{en:[['Client','Zara Loves Diamonds'],['Industry','Luxury · fine jewelry'],['Focus','Engagement rings'],['My role','Brand communication, content, Meta Ads']],es:[['Cliente','Zara Loves Diamonds'],['Industria','Lujo · alta joyería'],['Enfoque','Anillos de compromiso'],['Mi rol','Comunicación, contenido, Meta Ads']]},
+ ctx:{en:['Zara Loves Diamonds is a fine jewelry brand focused on engagement rings, with natural and lab-grown diamonds, sold online.','An engagement ring is a high-value, emotional purchase. The communication had to show exclusivity, attention to detail and the meaning behind each piece.'],
+      es:['Zara Loves Diamonds es una marca de alta joyería enfocada en anillos de compromiso, con diamantes naturales y de laboratorio, que vende en línea.','Un anillo de compromiso es una compra emocional y de alto valor. La comunicación tenía que transmitir exclusividad, detalle y el significado de cada pieza.']},
+ did:{en:['Defined the brand voice and visual line: soft, elegant and intimate.','Created educational content on diamond shapes, sizes and anatomy.','Planned and optimized Meta Ads campaigns.'],
+      es:['Definí la voz y la línea visual de la marca: suave, elegante e íntima.','Creé contenido educativo sobre formas, medidas y anatomía del diamante.','Planeé y optimicé campañas de Meta Ads.']},
+ nums:{en:[['80.3K','Monthly views'],['52.9K','Views on the top video'],['1.4K','Monthly interactions'],['695','Followers gained']],es:[['80.3K','Vistas al mes'],['52.9K','Vistas en el mejor video'],['1.4K','Interacciones al mes'],['695','Seguidores ganados']]},
+ imp:{en:['A luxury presence that matches the value of the product.'],es:['Una presencia de lujo a la altura del producto.']},
+ gal:['za-rings','za-band','za-shapes','za-hands','za-matcha','za-box','za-olives','za-wrist','za-bracelet','za-grid2']},
+tainalai:{tint:'t-caramel',img:'tn-splash',pos:'50% 45%',title:'Tai Nalai',who:{en:'Food & beverage · Thai tea',es:'Comida y bebida · té tailandés'},
+ chips:{en:['Positioning','Visual identity','Content'],es:['Posicionamiento','Identidad visual','Contenido']},
+ res:{en:'1K–3.4K views per post in a niche category',es:'1K–3.4K vistas por post en una categoría de nicho'},
+ meta:{en:[['Client','Tai Nalai'],['Industry','Food & beverage'],['Focus','Introducing Thai tea in Mexico'],['My role','Positioning, identity, content']],es:[['Cliente','Tai Nalai'],['Industria','Comida y bebida'],['Enfoque','Dar a conocer el té tailandés en México'],['Mi rol','Posicionamiento, identidad, contenido']]},
+ ctx:{en:['Tai Nalai is the official distributor of ChaTraMue, an original Thai tea brand, in Mexico.','Most people in Mexico had never tried Thai tea. The brand needed to explain what it is, why it\'s different, and make people want to try it.'],
+      es:['Tai Nalai es distribuidor oficial en México de ChaTraMue, una marca original de té tailandés.','La mayoría de la gente en México nunca había probado el té tailandés. La marca necesitaba explicar qué es, por qué es diferente y antojar a la gente.']},
+ did:{en:['Positioned the product: what Thai tea is, its flavors and its benefits.','Developed the visual identity for content.','Created formats like Q&A videos, collaborations and workshops.'],
+      es:['Posicioné el producto: qué es el té tailandés, sus sabores y beneficios.','Desarrollé la identidad visual del contenido.','Creé formatos como videos de Q&A, colaboraciones y talleres.']},
+ nums:{en:[['1K–3.4K','Views per post'],['3','Content formats: Q&A, collabs, workshops'],['1,135','Followers']],es:[['1K–3.4K','Vistas por post'],['3','Formatos de contenido: Q&A, colaboraciones, talleres'],['1,135','Seguidores']]},
+ imp:{en:['Content that consistently drives engagement in a niche category, with the community growing month over month.'],es:['Contenido que genera engagement constante en una categoría de nicho, con una comunidad que crece mes a mes.']},
+ gal:['tn-splash','tn-trio','tn-pour','tn-glass','tn-matcha','tn-rose','tn-2','tn-pour2','tn-3','tn-grid2']}
+};
+var ORDER=['chivas','camino','dachvil','innova','zara','tainalai'];
+var T={en:{view:'View case',back:'← All work',ctx:'Context',did:'What I did',res:'Results',next:'Next case',snd:'Sound on',mute:'Mute',ig:'View on Instagram ↗'},es:{view:'Ver caso',back:'← Todos los proyectos',ctx:'Contexto',did:'Lo que hice',res:'Resultados',next:'Siguiente caso',snd:'Activar sonido',mute:'Silenciar',ig:'Ver en Instagram ↗'}};
+/* Reels: [file in  + poster in <file>-poster.jpg, caption EN, caption ES, Instagram post URL ('' = no link yet)] */
+var REELS=[
+ ['ca-reel','El Camino al Interior · 1.6M views','El Camino al Interior · 1.6M vistas','https://www.instagram.com/reel/DTNyQIKkVus/'],
+ ['da-reel-tower','Dachvil · location reel','Dachvil · reel de ubicación','https://www.instagram.com/reel/DexhgVpOR-q/'],
+ ['tn-reel','Tai Nalai · Thai tea matcha recipe','Tai Nalai · receta Thai tea matcha','https://www.instagram.com/reel/DXdBrrIjWoe/'],
+ ['da-reel-house','Dachvil · property tour','Dachvil · recorrido de propiedad','https://www.instagram.com/reel/DWZE1khDsjh/']
+];
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,io=null;
+function wireReels(){
+ var figs=[].slice.call(document.querySelectorAll('#reels .reel'));
+ if(io)io.disconnect();
+ io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target.querySelector('video');
+  if(e.isIntersecting){if(!reduce||!v.muted){var p=v.play();if(p&&p.catch)p.catch(function(){})}}else v.pause();})},{threshold:.35}):null;
+ figs.forEach(function(f){var v=f.querySelector('video'),b=f.querySelector('.frame'),s=f.querySelector('.snd');
+  if(io)io.observe(f);else if(!reduce)v.play().catch(function(){});
+  b.addEventListener('click',function(){var turnOn=v.muted;
+   figs.forEach(function(o){var ov=o.querySelector('video');ov.muted=true;o.classList.remove('on');o.querySelector('.snd').textContent='▶ '+T[L].snd;o.querySelector('.frame').setAttribute('aria-pressed','false')});
+   if(turnOn){v.muted=false;v.currentTime=0;v.play().catch(function(){});f.classList.add('on');s.textContent='■ '+T[L].mute;b.setAttribute('aria-pressed','true')}
+  });
+ });
+}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function pad(j){return (j<9?'0':'')+(j+1)}
+function renderRows(){
+ document.getElementById('rows').innerHTML=ORDER.map(function(k){var c=C[k];
+  return '<a class="row" href="#case-'+k+'"><div class="ph"><img src="'+c.img+'.jpg" alt="'+esc(c.title)+'" loading="lazy" style="object-position:'+(c.pos||'50% 50%')+'"></div>'+
+  '<div class="panel '+c.tint+'"><div><h3>'+esc(c.title)+'</h3><p class="who">'+esc(c.who[L])+'</p></div>'+
+  '<div class="chips">'+c.chips[L].map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join('')+'</div>'+
+  '<div class="panel-foot"><p class="res">'+esc(c.res[L])+'</p><span class="pill">'+T[L].view+' →</span></div></div></a>';
+ }).join('');
+ document.getElementById('reels').innerHTML=REELS.map(function(r){var cap=L==='es'?r[2]:r[1];
+  return '<figure class="reel"><button type="button" class="frame" aria-pressed="false" aria-label="'+esc(cap)+'"><video src="'+r[0]+'.mp4" poster="'+r[0]+'-poster.jpg" muted loop playsinline preload="none"></video><span class="snd mono">▶ '+T[L].snd+'</span></button>'+
+  '<figcaption class="mono"><span>'+esc(cap)+'</span>'+(r[3]?'<a class="ig" href="'+esc(r[3])+'" target="_blank" rel="noopener">'+T[L].ig+'</a>':'')+'</figcaption></figure>'}).join('');
+ wireReels();
+}
+function renderCase(k){var c=C[k],l=T[L],i=ORDER.indexOf(k),nk=ORDER[(i+1)%ORDER.length];
+ document.getElementById('case').innerHTML='<section class="case-top grain wrap"><img class="bg" src="'+c.img+'.jpg" alt="" style="object-position:'+(c.pos||'50% 50%')+'"><div class="inner">'+
+  '<a class="back mono" href="#work">'+l.back+'</a><h1>'+esc(c.title)+'</h1><p style="font-size:19px">'+esc(c.who[L])+'</p>'+
+  '<div class="meta">'+c.meta[L].map(function(m){return '<div><span class="mono">'+esc(m[0])+'</span><span>'+esc(m[1])+'</span></div>'}).join('')+'</div></div></section>'+
+  '<section class="band wrap"><div class="inner cbody"><div><h2>'+l.ctx+'</h2>'+c.ctx[L].map(function(p){return '<p>'+esc(p)+'</p>'}).join('')+
+  '<div class="chips" style="margin-top:24px">'+c.chips[L].map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join('')+'</div></div>'+
+  '<div><h2>'+l.did+'</h2><ol class="did">'+c.did[L].map(function(d,j){return '<li><span>'+pad(j)+'</span><span>'+esc(d)+'</span></li>'}).join('')+'</ol></div></div></section>'+
+  '<section class="band yellow wrap" style="padding-block:clamp(56px,7vw,90px)"><div class="inner"><div class="head" style="margin-bottom:28px"><h2 style="font-size:clamp(40px,6vw,84px)">'+l.res+'</h2></div><div class="cres">'+
+  c.nums[L].map(function(n){return '<div><b>'+esc(n[0])+'</b><span class="mono">'+esc(n[1])+'</span></div>'}).join('')+'</div>'+
+  '<span class="mono imp-h">'+(L==='es'?'Impacto':'Impact')+'</span><ul class="imp">'+c.imp[L].map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></div></section>'+
+  '<section class="band wrap"><div class="inner"><div class="gal">'+c.gal.map(function(g){if(/\.mp4$/.test(g)){var n=g.replace(/\.mp4$/,'');return '<video src="'+g+'" poster="'+n+'-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="'+esc(c.title)+'"></video>'}return '<img src="'+g+'.jpg" alt="'+esc(c.title)+'" loading="lazy">'}).join('')+'</div>'+
+  '<a class="next" href="#case-'+nk+'" style="margin-top:56px"><span class="mono">'+l.next+'</span><h3>'+esc(C[nk].title)+' →</h3></a></div></section>';
+}
+/* Contact links: fill these in and the buttons switch on.
+   WA: international number, digits only (e.g. '34600111222'). BOOK: Calendly or similar URL. */
+var WA='', BOOK='';
+var WAMSG={en:"Hi Dani! I saw your website and I'd like to talk about my brand.",es:"¡Hola Dani! Vi tu página y me gustaría hablar sobre mi marca."};
+function wireContact(){
+ [].forEach.call(document.querySelectorAll('.js-wa'),function(a){
+  if(WA){a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(WAMSG[L]);a.target='_blank';a.rel='noopener';a.hidden=false}
+  else{a.href=sp.contains(a)?'#sp-contact':'#contact';a.removeAttribute('target');if(a.classList.contains('js-wa-c'))a.hidden=true}
+ });
+ [].forEach.call(document.querySelectorAll('.js-book'),function(a){if(BOOK){a.href=BOOK;a.target='_blank';a.rel='noopener';a.hidden=false}else a.hidden=true});
+}
+var sp=document.getElementById('spiritual-view');
+/* Anchors inside the spiritual view scroll in place instead of changing the route */
+sp.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
+ if(id==='spiritual'||id==='top'||id.indexOf('case-')===0)return;var t=document.getElementById(id);if(t){e.preventDefault();t.scrollIntoView()}});
+function spVideos(on){[].forEach.call(sp.querySelectorAll('video'),function(v){if(on&&!reduce){v.preload='metadata';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})}
+function route(){
+ var h=(location.hash||'').slice(1),home=document.getElementById('home'),cs=document.getElementById('case');
+ if(h==='spiritual'){document.body.classList.add('sp-on');home.hidden=true;cs.hidden=true;sp.hidden=false;spVideos(true);window.scrollTo(0,0);return}
+ document.body.classList.remove('sp-on');sp.hidden=true;spVideos(false);
+ if(h.indexOf('case-')===0&&C[h.slice(5)]){renderCase(h.slice(5));home.hidden=true;cs.hidden=false;window.scrollTo(0,0);return}
+ if(!home.hidden&&cs.hidden)return;
+ home.hidden=false;cs.hidden=true;
+ var t=h&&document.getElementById(h);setTimeout(function(){t?t.scrollIntoView():window.scrollTo(0,0)},0);
+}
+window.addEventListener('hashchange',route);
+var els=[].slice.call(document.querySelectorAll('[data-es]'));els.forEach(function(el){el.dataset.en=el.innerHTML});
+function setLang(l){L=l;els.forEach(function(el){el.innerHTML=l==='es'?el.dataset.es:el.dataset.en});document.documentElement.lang=l;
+ document.getElementById('lang-en').setAttribute('aria-pressed',l==='en');document.getElementById('lang-es').setAttribute('aria-pressed',l==='es');
+ renderRows();wireContact();var cvb=document.getElementById('cv-btn');if(cvb)cvb.href='Daniela-Partida-CV-'+(l==='es'?'ES':'EN')+'.pdf';var h=(location.hash||'').slice(1);if(h.indexOf('case-')===0&&C[h.slice(5)])renderCase(h.slice(5));
+ try{localStorage.setItem('dp-lang',l)}catch(x){}}
+document.getElementById('lang-en').onclick=function(){setLang('en')};document.getElementById('lang-es').onclick=function(){setLang('es')};
+var s='en';try{s=localStorage.getItem('dp-lang')||'en'}catch(x){}setLang(s==='es'?'es':'en');route();
+var cp=document.getElementById('copy');cp.addEventListener('click',function(){var t=document.getElementById('email').textContent;
+ var ok=function(){var o=cp.textContent;cp.textContent=L==='es'?'Copiado':'Copied';setTimeout(function(){cp.textContent=o},1600)};
+ var sel=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var g=getSelection();g.removeAllRanges();g.addRange(r)};
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,sel);else sel();});
+})();
+</script>
+</body>
+</html>
