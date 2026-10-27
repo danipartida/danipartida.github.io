@@ -34,6 +34,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 body{background:var(--ink);color:var(--paper);font-family:var(--body);font-weight:400;font-variation-settings:"wdth" 100;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -57,7 +58,7 @@ p{margin:0}
 .top .inner{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .logo{font-family:var(--display);font-weight:600;font-variation-settings:"wdth" 100;font-size:18px;text-decoration:none}
 nav{display:flex;gap:22px;align-items:center}
-nav a{text-decoration:none;font-size:13px;font-weight:400;opacity:.85}
+nav a{text-decoration:none;font-size:14.5px;font-weight:400;opacity:.9}
 nav a:hover{opacity:1;color:var(--yellow)}
 .lang{display:inline-flex;border:1px solid rgba(239,234,219,.4);border-radius:999px;overflow:hidden}
 .lang button{all:unset;cursor:pointer;font-family:var(--display);font-weight:700;font-size:10px;letter-spacing:.06em;padding:5px 9px;color:var(--paper)}
@@ -183,7 +184,7 @@ nav a:hover{opacity:1;color:var(--yellow)}
 .portrait{position:relative;max-width:460px;width:100%}
 .portrait img{aspect-ratio:4/5;width:100%;object-fit:cover;object-position:50% 25%;filter:grayscale(1) contrast(1.08)}
 .about-txt{display:grid;gap:22px;min-width:0}
-.about-txt h2{font-size:clamp(44px,7vw,100px);color:var(--yellow)}
+.about-txt h2{font-size:clamp(44px,7vw,100px);color:var(--yellow);margin-left:-.05em}
 .about-txt p{max-width:50ch;font-size:18px;line-height:1.6;color:rgba(239,234,219,.86)}
 .off{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .off .chip{font-size:11px;padding:6px 12px}
@@ -296,13 +297,15 @@ body.sp-on #contact{display:none}
 
 /* hero */
 .z-hero{position:relative;min-height:min(940px,max(620px,100vh));display:grid;place-items:center;overflow:hidden;background:var(--earth);color:var(--cream);text-align:center}
-.z-hero .bg{object-position:50% 62%;filter:brightness(.7) saturate(.8) sepia(.12)}
+.sp-hero-vid{display:none}
+@media (max-width:760px){.sp-hero-vid{display:block}.sp-hero-img{display:none}}
+.z-hero .bg{object-position:50% 62%;filter:brightness(.52) saturate(.8) sepia(.12)}
 .z-hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(42,32,24,.55),rgba(42,32,24,.08) 38%,rgba(42,32,24,.15) 62%,rgba(42,32,24,.8))}
 .z-hero .inner{position:relative;z-index:5;display:grid;justify-items:center;gap:22px;padding-block:130px 120px;width:100%}
 .z-hero .sun{width:46px;height:46px;color:#ecd9a6}
 .z-hero h1{font-family:var(--zen);font-weight:400;font-size:clamp(46px,8.4vw,128px);line-height:.95;letter-spacing:-.025em;text-transform:none;text-wrap:balance}
 .z-hero h1 em{display:block;font-style:italic}
-.z-hero p{font-size:clamp(16px,1.5vw,19px);max-width:44ch;line-height:1.5;opacity:.9}
+.z-hero p{text-wrap:balance;font-size:clamp(16px,1.5vw,19px);max-width:44ch;line-height:1.5;opacity:.9}
 .z-hero .z-ctas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:6px}
 .z-hero .z-hero-foot{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;padding:0;margin:0 auto;width:auto;max-width:1280px;left:0;right:0;padding-inline:16px;justify-items:normal;}
 @media (max-width:600px){.z-hero .z-hero-foot{grid-template-columns:1fr;gap:12px;justify-items:center}.z-hero-foot > :first-child,.z-hero-foot > :last-child{justify-self:center}.z-hero-foot .chakra{order:-1}}
@@ -312,21 +315,28 @@ body.sp-on #contact{display:none}
 .z-hero-foot a:hover{opacity:1}
 
 /* about */
-.z-about .inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:24px clamp(28px,5vw,80px);padding-block:clamp(80px,10vw,140px) clamp(48px,6vw,80px)}
+.z-about .inner{display:grid;grid-template-columns:minmax(0,.35fr) minmax(0,1.95fr) minmax(0,1fr);align-items:center;gap:24px clamp(28px,5vw,80px);padding-block:clamp(80px,10vw,140px) clamp(48px,6vw,80px)}
 .z-about .z-label{color:#8a7a68;padding-top:14px}
-.z-about h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(32px,4.2vw,60px);line-height:1.08;letter-spacing:-.02em;max-width:22ch}
+.z-about h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(32px,4vw,54px);line-height:1.1;letter-spacing:-.02em}
+.z-about h2 em{display:block}
+@media (min-width:900px){.z-about h2 em{white-space:nowrap}}
 .z-about h2 em{font-style:italic}
-.z-about .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px 36px;margin-top:34px;max-width:780px}
+.z-about .cols{display:grid;gap:16px;margin-top:30px;max-width:52ch}
+.z-about .z-label{align-self:start;padding-top:0;margin-top:calc(.55*clamp(32px,4vw,54px) - .5lh)}
+.z-about .inner > div{align-self:start}
+.z-ritual{align-self:center}
+.z-ritual{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
 .z-about .cols p{font-size:15.5px;line-height:1.65;color:#5a4a3c}
-@media (max-width:760px){.z-about .inner{grid-template-columns:minmax(0,1fr)}.z-about .cols{grid-template-columns:1fr}}
-.z-about .z-strip{display:grid;padding-top:0;gap:12px;grid-template-columns:1fr 1.6fr 1fr 1fr;gap:12px;padding-bottom:clamp(52px,6vw,84px)}
+@media (max-width:760px){.z-about .inner{grid-template-columns:minmax(0,1fr)}.z-ritual{max-width:420px}}
+.z-about .z-strip{display:grid;padding-top:0;gap:12px;grid-template-columns:repeat(4,1fr);gap:12px;padding-bottom:clamp(52px,6vw,84px)}
 .z-strip img{width:100%;height:clamp(220px,26vw,360px);object-fit:cover;border-radius:3px}
 @media (max-width:760px){.z-about .z-strip{grid-template-columns:1fr 1fr}.z-strip img{height:220px}}
 
 /* who */
 .z-who{background:var(--earth);color:var(--cream);text-align:center}
 .z-who .inner{padding-block:clamp(52px,6vw,84px);display:grid;justify-items:center;gap:30px}
-.z-who .lead{font-family:var(--zen);font-style:italic;font-size:clamp(22px,2.4vw,32px);color:#e3d3b4;max-width:30ch;line-height:1.3}
+.z-who .lead{font-family:var(--zen);font-style:italic;font-size:clamp(22px,2.4vw,32px);color:#e3d3b4;max-width:none;line-height:1.3;text-wrap:balance}
+@media (min-width:760px){.z-who .lead{white-space:nowrap}}
 .z-who .suns{display:flex;gap:clamp(28px,6vw,90px);justify-content:center;flex-wrap:wrap}
 .z-who .suns div{display:grid;justify-items:center;gap:12px}
 .z-who .suns .sun{width:42px;height:42px}
@@ -337,7 +347,7 @@ body.sp-on #contact{display:none}
 /* services */
 .z-svc .inner{padding-block:clamp(52px,6vw,84px)}
 .z-head{display:grid;justify-items:center;text-align:center;gap:14px;margin-bottom:clamp(32px,4vw,56px)}
-.z-head h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.025em}
+.z-head h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(34px,4.4vw,62px);line-height:1;letter-spacing:-.025em}
 .z-head h2 em{font-style:italic}
 .z-head p{max-width:46ch;color:#6a5a4a;font-size:16px}
 .z-head .z-label{color:#8a7a68}
@@ -354,9 +364,12 @@ body.sp-on #contact{display:none}
 @media (max-width:600px){.z-grid{grid-template-columns:1fr}.z-card:nth-child(even){border-left:0}.z-card{padding-inline:0}}
 
 /* process: overlapping circles */
-.z-proc{background:var(--sage);color:var(--cream);text-align:center}
+.z-proc{position:relative;overflow:hidden;background:var(--sage);color:var(--cream);text-align:center}
+.z-proc .bg{filter:saturate(.7)}
+.z-proc::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(98,110,78,.8)}
+.z-proc .inner{position:relative;z-index:2}
 .z-proc .inner{padding-block:clamp(52px,6vw,84px);display:grid;justify-items:center;gap:40px}
-.z-proc h2{font-family:var(--zen);font-weight:400;font-style:italic;text-transform:none;font-size:clamp(40px,5.6vw,80px);line-height:1}
+.z-proc h2{font-family:var(--zen);font-weight:400;font-style:italic;text-transform:none;font-size:clamp(34px,4.4vw,62px);line-height:1}
 .rings{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:min(1000px,100%)}
 .ring{display:grid;justify-items:center;gap:18px;min-width:0}
 .ring .c{width:min(230px,26vw);aspect-ratio:1;border:1px solid rgba(242,236,226,.6);border-radius:50%;display:grid;place-items:center;margin-inline:-14%}
@@ -376,7 +389,7 @@ body.sp-on #contact{display:none}
 .z-nums div{border-top:1px solid rgba(242,236,226,.2);padding:16px 0;display:grid;gap:4px}
 .z-nums b{font-family:var(--zen);font-weight:400;font-size:clamp(36px,4vw,54px);line-height:1;letter-spacing:-.02em}
 .z-nums span{font-size:13px;opacity:.7}
-.z-proof .q{font-family:var(--zen);font-style:italic;font-size:clamp(19px,1.7vw,23px);line-height:1.4;margin-top:22px;color:#e3d3b4;max-width:40ch}
+.z-proof .q{font-size:16.5px;line-height:1.65;margin-top:22px;color:rgba(242,236,226,.82);max-width:46ch}
 .z-proof .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 @media (max-width:860px){.z-proof .inner{grid-template-columns:minmax(0,1fr)}}
 
@@ -401,11 +414,16 @@ body.sp-on #contact{display:none}
 
 /* closing */
 .z-cta{background:var(--lilac);text-align:center}
-.z-cta .inner{padding-block:clamp(60px,7vw,100px);display:grid;justify-items:center;gap:22px}
-.z-cta h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(52px,9vw,140px);line-height:.95;letter-spacing:-.03em}
+.z-cta{text-align:left}
+.z-cta .inner{padding-block:clamp(60px,7vw,100px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,90px);align-items:center;max-width:1080px}
+.z-cta-txt{display:grid;justify-items:start;gap:20px}
+.z-arch{margin:0;width:100%;max-width:340px;justify-self:end}
+.z-arch img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 4px 4px}
+@media (max-width:760px){.z-cta .inner{grid-template-columns:minmax(0,1fr)}.z-arch{justify-self:center;max-width:300px}}
+.z-cta h2{font-family:var(--zen);font-weight:400;text-transform:none;font-size:clamp(38px,5vw,72px);line-height:.95;letter-spacing:-.03em}
 .z-cta h2 em{display:block;font-style:italic;font-size:.42em;letter-spacing:-.01em;margin-top:.3em;color:#4a3d5c}
 .z-cta p{max-width:44ch;font-size:16.5px;color:#4a3d36}
-.z-cta .z-ctas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.z-cta .z-ctas{display:flex;flex-wrap:wrap;gap:10px}
 .z-cta .mail{font-family:var(--zen);font-style:italic;font-size:clamp(20px,2vw,26px);user-select:all;overflow-wrap:anywhere}
 .sym{color:var(--c3)}
 .z-who .lotus-c{color:#e7b7a0}.z-who .moon-c{color:var(--c7)}
@@ -616,6 +634,10 @@ body.sp-on #contact{display:none}
           <span class="chip" data-es="Naturaleza">Nature</span>
           <span class="chip" data-es="Meditación">Meditation</span>
           <span class="chip" data-es="Conocer otras culturas">Learning other cultures</span>
+          <span class="chip" data-es="Libros espirituales">Spiritual books</span>
+          <span class="chip" data-es="Dibujar">Drawing</span>
+          <span class="chip" data-es="Escribir">Writing</span>
+          <span class="chip" data-es="Romance e historia">Romance &amp; history</span>
         </div>
       </div>
     </div>
@@ -674,12 +696,13 @@ body.sp-on #contact{display:none}
   <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><line x1="36.0" y1="24.0" x2="45.0" y2="24.0"/><line x1="35.5" y1="28.8" x2="39.7" y2="30.5"/><line x1="32.5" y1="32.5" x2="38.8" y2="38.8"/><line x1="28.8" y1="35.5" x2="30.5" y2="39.7"/><line x1="24.0" y1="36.0" x2="24.0" y2="45.0"/><line x1="19.2" y1="35.5" x2="17.5" y2="39.7"/><line x1="15.5" y1="32.5" x2="9.2" y2="38.8"/><line x1="12.5" y1="28.8" x2="8.3" y2="30.5"/><line x1="12.0" y1="24.0" x2="3.0" y2="24.0"/><line x1="12.5" y1="19.2" x2="8.3" y2="17.5"/><line x1="15.5" y1="15.5" x2="9.2" y2="9.2"/><line x1="19.2" y1="12.5" x2="17.5" y2="8.3"/><line x1="24.0" y1="12.0" x2="24.0" y2="3.0"/><line x1="28.8" y1="12.5" x2="30.5" y2="8.3"/><line x1="32.5" y1="15.5" x2="38.8" y2="9.2"/><line x1="35.5" y1="19.2" x2="39.7" y2="17.5"/></g></symbol><symbol id="moon" viewBox="0 0 48 48"><path d="M31 8.5A15.5 15.5 0 1 0 31 39.5A12.5 12.5 0 1 1 31 8.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol><symbol id="lotus" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"><path d="M24 9C30 17 30 28 24 36C18 28 18 17 24 9Z"/><path d="M24 36C15 34 10 26 10 18C17 20 22 27 24 36Z"/><path d="M24 36C33 34 38 26 38 18C31 20 26 27 24 36Z"/><path d="M24 37C16 38.5 8 35.5 4 29.5C12 28.5 19 31 24 37Z"/><path d="M24 37C32 38.5 40 35.5 44 29.5C36 28.5 29 31 24 37Z"/><path d="M14 41H34"/></g></symbol></defs></svg>
 
   <section class="z-hero grain wrap" aria-labelledby="h-sp">
-    <img class="bg" src="hero.jpg" alt="">
+    <img class="bg sp-hero-img" src="sp-hero.jpg" alt="">
+    <video class="bg sp-hero-vid" src="sp-sea.mp4" poster="sp-sea-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
     <div class="inner">
       <svg class="sun" aria-hidden="true"><use href="#sun"/></svg>
       <span class="z-label z-brace" data-es="Daniela Partida · marketing consciente">Daniela Partida · conscious marketing</span>
       <h1 id="h-sp" data-es="Marketing para <em>marcas espirituales</em>">Marketing for <em>spiritual brands</em></h1>
-      <p data-es="Estrategia, marca, relaciones públicas y contenido para terapeutas, sanadoras, guías y marcas conscientes que quieren crecer sin perder su esencia.">Strategy, brand, PR and content for therapists, healers, guides and conscious brands who want to grow without losing their essence.</p>
+      <p data-es="Estrategia, marca, relaciones públicas y contenido para terapeutas, sanadoras, guías y marcas conscientes que quieren llegar a más personas.">Strategy, brand, PR and content for therapists, healers, guides and conscious brands who want to reach more people.</p>
       <div class="z-ctas">
         <a class="z-btn solid" href="#sp-contact" data-es="Hablemos">Let's talk</a>
         <a class="z-btn" href="#sp-services" data-es="Cómo te ayudo">How I help</a>
@@ -699,13 +722,15 @@ body.sp-on #contact{display:none}
         <h2 id="h-sp-about" data-es="Tu trabajo es sagrado. <em>Tu marketing también puede serlo.</em>">Your work is sacred. <em>Your marketing can be too.</em></h2>
         <div class="cols">
           <p data-es="Conozco este mundo desde dentro. Tus clientes no buscan un servicio: buscan sentirse vistos, acompañados y seguros antes de dar el primer paso.">I know this world from the inside. Your clients aren't looking for a service: they want to feel seen, held and safe before they take the first step.</p>
-          <p data-es="Por eso no hago marketing de urgencia ni de miedo. Construyo marcas con una voz clara, una estética que transmite tu energía y una estrategia que lleva a las personas correctas, con calma, hasta ti.">So I don't do urgency or fear-based marketing. I build brands with a clear voice, a visual world that carries your energy, and a strategy that gently brings the right people to you.</p>
+          <p data-es="Por eso, para mí, el marketing aquí no se trata solo de vender. Se trata de crear algo auténtico y real: una marca que sea una herramienta para que las personas trabajen en sí mismas, crezcan y sanen.">That's why, for me, marketing here isn't just about selling. It's about creating something authentic and real: a brand that becomes a tool to help people work on themselves, grow and heal.</p>
+          <p data-es="No hago marketing de urgencia ni de miedo. Construyo una voz clara, una estética que transmite tu energía y una estrategia que lleva a las personas correctas hasta ti, para que todos podamos acompañarnos en este camino.">I don't do urgency or fear-based marketing. I build a clear voice, a visual world that carries your energy and a strategy that gently brings the right people to you, so we can all support each other along the way.</p>
         </div>
       </div>
+      <img class="z-ritual" src="sp-ritual.jpg" alt="Candles, incense and a small Buddha" loading="lazy">
     </div>
     <div class="inner z-strip">
-      <img src="ca-almas.jpg" alt="El Camino al Interior post" loading="lazy">
-      <img src="water.jpg" alt="" loading="lazy">
+      <img src="ca-almas2.jpg" alt="El Camino al Interior post" loading="lazy">
+      <img src="ca-tiempo2.jpg" alt="El Camino al Interior post: Cada ser tiene su tiempo divino" loading="lazy">
       <img src="ca-lirio.jpg" alt="El Camino al Interior post" loading="lazy">
       <img src="ca-flor.jpg" alt="El Camino al Interior post" loading="lazy">
     </div>
@@ -714,7 +739,7 @@ body.sp-on #contact{display:none}
   <section class="z-who wrap" aria-labelledby="h-sp-who">
     <div class="inner">
       <span class="z-label z-brace" id="h-sp-who" data-es="con quién trabajo">who I work with</span>
-      <p class="lead" data-es="Para quienes sostienen el espacio de otros.">For those who hold space for others.</p>
+      <p class="lead" data-es="Terapeutas, guías y marcas conscientes.">Therapists, guides and conscious brands.</p>
       <div class="groups">
         <div><svg class="sun sym lotus-c" aria-hidden="true"><use href="#lotus"/></svg><span class="z-label" data-es="Sanar">Heal</span><p data-es="Terapeutas holísticas<br>Sanación energética y reiki<br>Centros de bienestar">Holistic therapists<br>Energy healing &amp; reiki<br>Wellness centers</p></div>
         <div><svg class="sun sym moon-c" aria-hidden="true"><use href="#moon"/></svg><span class="z-label" data-es="Guiar">Guide</span><p data-es="Astrología y tarot<br>Coaches y guías<br>Yoga y meditación">Astrology &amp; tarot<br>Coaches &amp; guides<br>Yoga &amp; meditation</p></div>
@@ -743,6 +768,7 @@ body.sp-on #contact{display:none}
   </section>
 
   <section class="z-proc wrap" aria-labelledby="h-sp-proc">
+    <img class="bg" src="sp-texture.jpg" alt="" loading="lazy">
     <div class="inner">
       <span class="z-label z-brace" data-es="proceso">process</span>
       <h2 id="h-sp-proc" data-es="Cómo trabajamos">How we work</h2>
@@ -766,10 +792,10 @@ body.sp-on #contact{display:none}
         <h2 id="h-sp-proof">El Camino <em data-es="al Interior">al Interior</em></h2>
         <p style="margin-top:10px;opacity:.75" data-es="Vero Milanés, terapeuta holística">Vero Milanés, holistic therapist</p>
         <div class="z-nums">
-          <div><b>0 → 34.3K</b><span data-es="Seguidores en los primeros 8 meses, 100% orgánico">Followers in the first 8 months, 100% organic</span></div>
+          <div><b>0 → 34.3K</b><span data-es="Seguidores en los primeros 8 meses">Followers in the first 8 months</span></div>
           <div><b>1.6M</b><span data-es="Vistas en un solo reel">Views on a single reel</span></div>
           <div><b>19.4K</b><span data-es="Veces compartido ese reel">Shares on that reel</span></div>
-          <div><b>0 €</b><span data-es="Invertidos en anuncios">Spent on ads</span></div>
+          <div><b>100%</b><span data-es="Orgánico, sin anuncios pagados">Organic, no paid ads</span></div>
         </div>
         <p class="q" data-es="Creé el concepto, la voz y el lenguaje visual, escribí cada copy y edité cada reel. La comunidad se convirtió en sesiones reservadas por WhatsApp.">I created the concept, the voice and the visual language, wrote every caption and edited every reel. The community turned into sessions booked on WhatsApp.</p>
         <div class="links">
@@ -805,14 +831,17 @@ body.sp-on #contact{display:none}
 
   <section class="z-cta wrap" id="sp-contact" aria-labelledby="h-sp-cta">
     <div class="inner">
+      <figure class="z-arch"><img src="sp-dani2.jpg" alt="Daniela Partida with her mother at a retreat" loading="lazy"></figure>
+      <div class="z-cta-txt">
       <span class="om big" aria-hidden="true">ॐ</span>
-      <h2 id="h-sp-cta" data-es="Hablemos. <em>Con calma, sin compromiso.</em>">Let's talk. <em>Calmly, no commitment.</em></h2>
-      <p data-es="Cuéntame de tu práctica y en qué momento está tu marca.">Tell me about your practice and where your brand is right now.</p>
+      <h2 id="h-sp-cta" data-es="Hablemos">Let's talk</h2>
+      <p data-es="Cuéntame sobre tu práctica y qué quieres lograr con tu marca. Te respondo en un par de días.">Tell me about your practice and what you want for your brand. I'll get back to you within a couple of days.</p>
       <a class="mail" href="mailto:danielapartida8@gmail.com" style="text-decoration:none">danielapartida8@gmail.com</a>
       <div class="z-ctas">
         <a class="z-btn dark js-wa js-wa-c" href="#sp-contact" hidden>WhatsApp</a>
         <a class="z-btn dark js-book" href="#sp-contact" hidden data-es="Agendar llamada">Book a call</a>
         <a class="z-btn dark" href="mailto:danielapartida8@gmail.com" data-es="Escríbeme un email">Email me</a>
+      </div>
       </div>
     </div>
   </section>
@@ -865,7 +894,7 @@ camino:{tint:'t-ocean',img:'ocean',title:'El Camino al Interior',who:{en:'Wellne
       es:['Creé el concepto e identidad de marca: un lenguaje visual cósmico y cinematográfico para la sanación emocional.','Definí la estrategia de contenido y sus pilares: reflexiones, astrología, procesos de sanación y su historia.','Escribí los copys y diseñé y edité cada post y reel (CapCut).','Hice crecer la comunidad 100% orgánico y la conecté con su canal de reservas por WhatsApp.']},
  nums:{en:[['34.3K','Followers, from zero'],['1.6M','Monthly views (March 2025)'],['1.4M','Views in 30 days'],['406K','Views on the top post'],['1.6M','Views on one reel'],['69.7K','Likes on that reel'],['19.4K','Shares on that reel'],['0 €','Spent on ads']],es:[['34.3K','Seguidores, desde cero'],['1.6M','Vistas al mes (marzo 2025)'],['1.4M','Vistas en 30 días'],['406K','Vistas en el mejor post'],['1.6M','Vistas en un reel'],['69.7K','Likes en ese reel'],['19.4K','Veces compartido ese reel'],['0 €','Invertidos en anuncios']]},
  imp:{en:['Built a brand and an active community from zero.','Turned followers into direct bookings for her services.','Positioned the brand inside the spiritual and wellness niche.'],es:['Construí una marca y una comunidad activa desde cero.','Convertí seguidores en reservas directas de sus servicios.','Posicioné la marca dentro del nicho espiritual y de bienestar.']},
- gal:['ca-almas','ca-reel','ca-raiz.mp4','ca-lirio','ca-flor','ca-reel2.mp4','ca-grid2']},
+ gal:['ca-almas2','ca-reel','ca-raiz.mp4','ca-lirio','ca-flor','ca-reel2.mp4','ca-grid2']},
 dachvil:{tint:'t-sky',img:'da-building2',pos:'40% 60%',title:'Dachvil',who:{en:'Real estate',es:'Real estate'},
  chips:{en:['Content strategy','Copywriting','Blog + LinkedIn','Social'],es:['Estrategia de contenido','Copywriting','Blog + LinkedIn','Redes']},
  res:{en:'15.8K monthly views within the first 2 months',es:'15.8K vistas al mes en los primeros 2 meses'},
@@ -976,7 +1005,7 @@ var sp=document.getElementById('spiritual-view');
 /* Anchors inside the spiritual view scroll in place instead of changing the route */
 sp.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
  if(id==='spiritual'||id==='top'||id.indexOf('case-')===0)return;var t=document.getElementById(id);if(t){e.preventDefault();t.scrollIntoView()}});
-function spVideos(on){[].forEach.call(sp.querySelectorAll('video'),function(v){if(on&&!reduce){v.preload='metadata';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})}
+function spVideos(on){[].forEach.call(sp.querySelectorAll('video'),function(v){if(on&&!reduce&&getComputedStyle(v).display!=='none'){v.preload='metadata';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})}
 function route(){
  var h=(location.hash||'').slice(1),home=document.getElementById('home'),cs=document.getElementById('case');
  if(h==='spiritual'){document.body.classList.add('sp-on');home.hidden=true;cs.hidden=true;sp.hidden=false;spVideos(true);window.scrollTo(0,0);return}
